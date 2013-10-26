@@ -21,15 +21,6 @@ begin
 
 	puts steins_gate.respond_to?('genres')
 
-	# print all info by type
-	#steins_gate.print_all_info
-
-	# print all episodes by number and title
-#	steins_gate.print_all_episodes
-
-	# print all staff by task and name
-	#steins_gate.print_all_staff
-
 rescue
 	puts "oops"
 
