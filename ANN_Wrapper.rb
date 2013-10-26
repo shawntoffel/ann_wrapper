@@ -1,7 +1,6 @@
 require "net/http"
 require "xml-object"
 
-
 # wrapper class for ANN API
 class ANN__Wrapper
 	# ANN API anime url
@@ -14,9 +13,9 @@ class ANN__Wrapper
 			resp = Net::HTTP.get_response(URI.parse(url))
 
 			# get the response body
-			data = resp.body
+			resp.body
 		rescue
-			return nil
+			nil
 		end
 	end	
 
@@ -25,12 +24,20 @@ class ANN__Wrapper
 		# append id to API url and send request
 		data = _fetch_data(ANN_ANIME_URL << id.to_s)
 
+		return ANN_Error.new("No response") if data.nil?
+
 		# 'deserialize' returned xml to ann object
 		ann = XMLObject.new(data)
 
-		# initialize new ann_anime with anime in ann object
-		ann_anime = ANN_Anime.new(ann.anime)
+		# initialize new ann_anime or error with ann object
+		begin
+			ANN_Anime.new(ann.anime)
+		rescue NameError => e
+			# ANN always provides an error warning
+			ANN_Error.new(ann.warning)
+		end
 	end
+
 end
 
 class ANN_Anime
@@ -67,3 +74,12 @@ class ANN_Anime
 	def respond_to_missing?(name, include_private = false)
 		@info.has_key?(name) || super
 	end
+end
+
+class ANN_Error
+	attr_accessor :message
+	
+	def initialize(message)
+		@message = message
+	end
+end

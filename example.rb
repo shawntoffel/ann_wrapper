@@ -15,8 +15,13 @@ begin
 	# fetch ANN_Anime by id
 	steins_gate = ann_wrapper.fetch_ann_anime(11770)
 
+	if steins_gate.is_a?(ANN_Error)
+		puts steins_gate.message
+		exit(1)
+	end
+
 	puts steins_gate.synopsis
-	puts steins_gate.episodes
+	puts steins_gate.num_episodes
 	puts steins_gate.genres
 
 	puts steins_gate.respond_to?('genres')
@@ -25,5 +30,5 @@ rescue
 	puts "oops"
 
 	# print last exception and backtrace
-	puts $!, $@
+	puts $!.inspect, $@
 end
