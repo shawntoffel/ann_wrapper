@@ -15,9 +15,18 @@ begin
 	# fetch ANN_Anime by id
 	steins_gate = ann_wrapper.fetch_ann_anime(11770)
 
+	puts steins_gate.synopsis
+	puts steins_gate.episodes
+	puts steins_gate.genres
+	puts steins_gate.image
+
+
+
+
+
 
 	# print all info by type
-	steins_gate.print_all_info
+	#steins_gate.print_all_info
 
 	# print all episodes by number and title
 #	steins_gate.print_all_episodes
