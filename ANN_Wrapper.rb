@@ -41,69 +41,29 @@ class ANN_Anime
 	def initialize(ann_anime)
 		@ann_anime = ann_anime
 
-		@info["synopsis"] = "Plot Summary"
+		@info = Hash.new
+		@info[:synopsis]     = "Plot Summary"
+		@info[:num_episodes] = "Number of episodes"
+		@info[:genres]       = "Genres"
+		@info[:title]        = "Main title"
+		@info[:vintage]      = "Vintage"
 	end
 
+	# return all info with provided key
 	def find_info(key)
 		@ann_anime.info.find_all {|info| info.type.eql?(key)}
 	end
 
-	def synopsis
-		find_info("Plot Summary")
-	end
-
-	def episodes
-		find_info("Number of episodes")
-	end
-
-	def genres
-		find_info("Genres")
-	end
-
-	def title
-		find_info("Main title")
-	end
-
-	def image
-		find_info("Picture")
-	end
-
-	def vintage
-		find_info("Vintage")
-	end
-
-	def method_missing(name, *args, &blk)
-		if (args.empty? && blk.nil? && @info.has_key(name)
+	# call methods from hash
+	def method_missing(name, *args, &block)
+		if (args.empty? && block.nil? && @info.has_key?(name))
 			find_info(@info[name])
 		else
 			super
 		end
 	end
 
-
-	# helper to print a dash between two objects
-	def formatted_print(first, second)
-			puts "#{first} - #{second}"
+	# add hash methods to respond_to and #method
+	def respond_to_missing?(name, include_private = false)
+		@info.has_key?(name) || super
 	end
-
-	# print all the anime's info with type and value
-	def print_all_info
-		@ann_anime.info.each do |info|
-			formatted_print(info.type, info)
-		end
-	end
-
-	# print all the anime's episodes with number and title
-	def print_all_episodes
-		@ann_anime.episodes.each do |episode|
-			formatted_print(episode.num, episode.title)
-		end
-	end
-
-	# print all the anime's staff with task and name
-	def print_all_staff
-		@ann_anime.staff.each do |staff|
-			formatted_print(staff.task, staff.person)
-		end
-	end
-end

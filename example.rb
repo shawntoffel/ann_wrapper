@@ -18,12 +18,8 @@ begin
 	puts steins_gate.synopsis
 	puts steins_gate.episodes
 	puts steins_gate.genres
-	puts steins_gate.image
 
-
-
-
-
+	puts steins_gate.respond_to?('genres')
 
 	# print all info by type
 	#steins_gate.print_all_info
