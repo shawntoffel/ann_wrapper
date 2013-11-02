@@ -21,13 +21,13 @@ begin
 	end
 
 	puts steins_gate.synopsis
-	puts steins_gate.num_episodes
-	puts steins_gate.genres
-	puts steins_gate.themes
-	puts steins_gate.op_theme
-	puts steins_gate.ed_theme
-	puts steins_gate.episodes
-	puts steins_gate.staff
+#	puts steins_gate.num_episodes
+#	puts steins_gate.genres
+#	puts steins_gate.themes
+#	puts steins_gate.op_theme
+#	puts steins_gate.ed_theme
+#	puts steins_gate.episodes
+#	puts steins_gate.staff
 
 	puts steins_gate.respond_to?('synopsis')
 
