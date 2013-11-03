@@ -12,9 +12,6 @@ begin
 	# create new ANN API Wrapper
 	ann_wrapper = ANN__Wrapper.new
 
-	# fetch multiple anime in one call
-	# anime = ann_wrapper.fetch_ann_anime(11770, 12120)
-
 	steins_gate = ann_wrapper.fetch_ann_anime(11770)
 
 	if steins_gate.is_a?(ANN_Error)
@@ -32,6 +29,7 @@ begin
 	puts steins_gate.ed_theme
 	puts steins_gate.episodes
 	puts steins_gate.staff
+	puts steins_gate.cast
 	puts steins_gate.images
 
 rescue

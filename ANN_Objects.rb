@@ -4,6 +4,7 @@
 
 ANN_Error   = Struct.new(:message)
 ANN_Staff   = Struct.new(:id, :task, :name)
+ANN_Cast    = Struct.new(:id, :role, :name)
 ANN_Episode = Struct.new(:number, :title, :lang)
 ANN_Image   = Struct.new(:src, :width, :height)
 
@@ -62,6 +63,13 @@ class ANN_Anime
 	def staff
 		@staff ||= @ann_anime.staff.map do |s|
 			ANN_Staff.new(s.person.id, s.task, s.person)
+		end
+	end
+
+	# returns array of ANN_Cast
+	def cast
+		@cast ||= @ann_anime.cast.map do |s|
+			ANN_Cast.new(s.person.id, s.role, s.person)
 		end
 	end
 
