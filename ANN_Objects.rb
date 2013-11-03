@@ -24,7 +24,6 @@ class ANN_Anime
 		@info[:num_episodes]  = "Number of episodes"
 		@info[:genres]        = "Genres"
 		@info[:themes]        = "Themes"
-		@info[:title]         = "Main title"
 		@info[:vintage]       = "Vintage"
 		@info[:op_theme]      = "Opening Theme"
 		@info[:ed_theme]      = "Ending Theme"
