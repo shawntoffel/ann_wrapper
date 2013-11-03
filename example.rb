@@ -20,7 +20,9 @@ begin
 		exit(1)
 	end
 
-	puts steins_gate.synopsis
+	puts steins_gate.title
+	puts steins_gate.lang_titles
+#	puts steins_gate.synopsis
 #	puts steins_gate.num_episodes
 #	puts steins_gate.genres
 #	puts steins_gate.themes
@@ -28,8 +30,7 @@ begin
 #	puts steins_gate.ed_theme
 #	puts steins_gate.episodes
 #	puts steins_gate.staff
-
-	puts steins_gate.respond_to?('synopsis')
+	puts steins_gate.images
 
 rescue
 	puts "oops"
