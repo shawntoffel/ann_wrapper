@@ -5,9 +5,11 @@
 require "net/http"
 require "xml-object"
 require './ANN_Objects'
+require 'singleton'
 
 # wrapper class for ANN API
-class ANN__Wrapper
+class ANN_Wrapper
+	include Singleton
 	# ANN API anime url
 	ANN_URL = "http://cdn.animenewsnetwork.com/encyclopedia/api.xml"
 

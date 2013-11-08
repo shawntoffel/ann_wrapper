@@ -10,9 +10,8 @@ require './ANN_Wrapper'
 
 begin
 	# create new ANN API Wrapper
-	ann_wrapper = ANN__Wrapper.new
 
-	steins_gate = ann_wrapper.fetch_ann_anime(11770)
+	steins_gate = ANN_Wrapper.instance.fetch_ann_anime(11770)
 
 	if steins_gate.is_a?(ANN_Error)
 		puts steins_gate.message
