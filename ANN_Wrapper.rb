@@ -4,7 +4,7 @@
 
 require "net/http"
 require "xml-object"
-require './ANN_Objects'
+require File.join(File.expand_path(File.dirname(__FILE__)), './ANN_Objects')
 require 'singleton'
 
 # wrapper class for ANN API
