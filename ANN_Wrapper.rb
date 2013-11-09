@@ -16,52 +16,58 @@ class ANN_Wrapper
 	ANN_REPORTS_URL = "#{ANN_URL}/reports.xml"
 
 	# fetch data from ANN API via http GET request
-	def _fetch_data(url)
+	# returns XMLObject or ANN_Error
+	def fetch(url)
 		begin
 			# send http GET request with uri parsed from url
 			resp = Net::HTTP.get_response(URI.parse(url))
 
-			# get the response body
-			resp.body
+			# get the response body and try converting to object
+			XMLObject.new(resp.body)
 		rescue
-			nil
+			ANN_Error.new("xml format error, API likely unavailable")
 		end
 	end	
 
-	# fetch xml and deserialize to object
+	# attempt to grab error message from XMLObject
+	def get_xml_error(xobj)
+		begin
+			xobj.warning
+		rescue NameError
+			"bad response"
+		end
+	end
+
+	# fetch anime and convert to ANN_Anime
 	def fetch_ann_anime(id)
 		# append id to API url and send request
-		data = _fetch_data("#{ANN_API_URL}?anime=#{id.to_s}")
+		url = "#{ANN_API_URL}?anime=#{id.to_s}"
 
-		return ANN_Error.new("No response") if data.nil?
+		ann = fetch(url)
 
-		# 'deserialize' returned xml to ann object
-		ann = XMLObject.new(data)
+		return ann if ann.is_a?(ANN_Error)
 
 		# initialize new ann_anime or error with ann object
 		begin
 			ANN_Anime.new(ann.anime)
-		rescue NameError => e
-			# ANN always provides an error warning
-			ANN_Error.new(ann.warning)
+		rescue NameError
+			ANN_Error.new(get_xml_error(ann))
 		end
 	end
 
 	# fetch list of titles via reports
 	def fetch_titles(type="anime", nskip=0, nlist=50, name="")
 		url = "#{ANN_REPORTS_URL}?id=155&type=#{type}&nskip=#{nskip}&nlist=#{nlist}"
-		data = _fetch_data(url)
+		report  = fetch(url)
 
-		return ANN_Error.new("No response") if data.nil?
+		return report if report.is_a?(ANN_Error)
 
 		begin
-			report = XMLObject.new(data)
-		rescue
-			return ANN_Error.new("xml format error, API likely unavailable")
-		end
-
-		report.items.map do |item|
-			ANN_Report.new(item)
+			report.items.map do |item|
+				ANN_Report.new(item)
+			end
+		rescue NameError
+			ANN_Error.new(get_xml_error(report))
 		end
 	end
 end
