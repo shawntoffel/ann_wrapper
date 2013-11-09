@@ -86,19 +86,18 @@ end
 class ANN_Report < ANN
 	# initialize and build access methods
 	def initialize(ann_report)
-		@ann_report = ann_report
 		@id, @type, @name, @precision, @vintage = ""
 
 		self.instance_variables.each do |iv|
 			var_name = iv.to_s.partition("@").last
-			create_method(var_name) { get_info_on(var_name) }
+			create_method(var_name) { get_info_on(ann_report, var_name) }
 		end
 	end
 
 	# get info from XMLObject
-	def get_info_on(var_name)
+	def get_info_on(ann_report, var_name)
 		begin 
-			@ann_report.send(var_name)
+			ann_report.send(var_name)
 		rescue NameError
 		end
 	end
