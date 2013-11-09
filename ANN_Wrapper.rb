@@ -42,7 +42,7 @@ class ANN_Wrapper
 		begin
 			ANN_Anime.new(ann.anime)
 		rescue NameError => e
-			# ANN always provides an error war50
+			# ANN always provides an error warning
 			ANN_Error.new(ann.warning)
 		end
 	end
