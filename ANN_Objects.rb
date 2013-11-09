@@ -11,7 +11,7 @@ private
 		end
 end
 
-# various ANN stuct types
+# various ANN struct types
 ANN_Error   = Struct.new(:message)
 ANN_Staff   = Struct.new(:id, :task, :name)
 ANN_Cast    = Struct.new(:id, :role, :name)
