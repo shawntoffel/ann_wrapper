@@ -31,7 +31,7 @@ class ANN_Wrapper
 	# fetch xml and deserialize to object
 	def fetch_ann_anime(id)
 		# append id to API url and send request
-		data = _fetch_data("#{ANN_URL}?anime=#{id.to_s}")
+		data = _fetch_data("#{ANN_API_URL}?anime=#{id.to_s}")
 
 		return ANN_Error.new("No response") if data.nil?
 
