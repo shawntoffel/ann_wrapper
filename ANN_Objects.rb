@@ -2,13 +2,23 @@
 # ANN_Objects
 ##################################################
 
+# parent with helper methods
+class ANN
+private
+		# define method with supplied name and block
+		def create_method(name, &block)
+			self.class.send(:define_method, name, &block)
+		end
+end
+
+# various ANN stuct types
 ANN_Error   = Struct.new(:message)
 ANN_Staff   = Struct.new(:id, :task, :name)
 ANN_Cast    = Struct.new(:id, :role, :name)
 ANN_Episode = Struct.new(:number, :title, :lang)
 ANN_Image   = Struct.new(:src, :width, :height)
 
-class ANN_Anime
+class ANN_Anime < ANN
 	# ann_anime XMLObject
 	attr_writer :ann_anime
 
@@ -71,10 +81,25 @@ class ANN_Anime
 			ANN_Cast.new(s.person.id, s.role, s.person)
 		end
 	end
+end
 
-private
-		# define method with supplied name and block
-		def create_method(name, &block)
-			self.class.send(:define_method, name, &block)
+class ANN_Report < ANN
+	# initialize and build access methods
+	def initialize(ann_report)
+		@ann_report = ann_report
+		@id, @type, @name, @precision, @vintage = ""
+
+		self.instance_variables.each do |iv|
+			var_name = iv.to_s.partition("@").last
+			create_method(var_name) { get_info_on(var_name) }
 		end
+	end
+
+	# get info from XMLObject
+	def get_info_on(var_name)
+		begin 
+			@ann_report.send(var_name)
+		rescue NameError
+		end
+	end
 end

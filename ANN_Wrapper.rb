@@ -11,7 +11,9 @@ require 'singleton'
 class ANN_Wrapper
 	include Singleton
 	# ANN API anime url
-	ANN_URL = "http://cdn.animenewsnetwork.com/encyclopedia/api.xml"
+	ANN_URL         = "http://cdn.animenewsnetwork.com/encyclopedia"
+	ANN_API_URL     = "#{ANN_URL}/api.xml"
+	ANN_REPORTS_URL = "#{ANN_URL}/reports.xml"
 
 	# fetch data from ANN API via http GET request
 	def _fetch_data(url)
@@ -40,10 +42,20 @@ class ANN_Wrapper
 		begin
 			ANN_Anime.new(ann.anime)
 		rescue NameError => e
-			# ANN always provides an error warning
+			# ANN always provides an error war50
 			ANN_Error.new(ann.warning)
 		end
 	end
+
+	# fetch list of titles via reports
+	def fetch_titles(type="anime", nskip=0, nlist=50, name="")
+		url = "#{ANN_REPORTS_URL}?id=155&type=#{type}&nskip=#{nskip}&nlist=#{nlist}"
+		data = _fetch_data(url)
+
+		report = XMLObject.new(data)
+
+		report.items.map do |item|
+			ANN_Report.new(item)
+		end
+	end
 end
-
-
