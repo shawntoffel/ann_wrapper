@@ -52,7 +52,13 @@ class ANN_Wrapper
 		url = "#{ANN_REPORTS_URL}?id=155&type=#{type}&nskip=#{nskip}&nlist=#{nlist}"
 		data = _fetch_data(url)
 
-		report = XMLObject.new(data)
+		return ANN_Error.new("No response") if data.nil?
+
+		begin
+			report = XMLObject.new(data)
+		rescue
+			return ANN_Error.new("xml format error, API likely unavailable")
+		end
 
 		report.items.map do |item|
 			ANN_Report.new(item)
