@@ -11,7 +11,7 @@ require './ANN_Wrapper'
 begin
 	# create new ANN API Wrapper
 
-	steins_gate = ANN_Wrapper.instance.fetch_ann_anime(11770)
+	steins_gate = ANN_Wrapper.instance.fetch_ann_anime(10706)
 
 	if steins_gate.is_a?(ANN_Error)
 		puts steins_gate.message
@@ -26,9 +26,9 @@ begin
 #	puts steins_gate.themes
 #	puts steins_gate.op_theme
 #	puts steins_gate.ed_theme
-#	puts steins_gate.episodes
-#	puts steins_gate.staff
-#	puts steins_gate.cast
+	puts steins_gate.episodes
+	puts steins_gate.staff
+	puts steins_gate.cast
 #	puts steins_gate.images
 
 #titles = ANN_Wrapper.instance.fetch_titles("anime", 0, 5)

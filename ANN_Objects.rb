@@ -14,7 +14,7 @@ end
 # various ANN struct types
 ANN_Error   = Struct.new(:message)
 ANN_Staff   = Struct.new(:id, :task, :name)
-ANN_Cast    = Struct.new(:id, :role, :name)
+ANN_Cast    = Struct.new(:id, :role, :name, :lang)
 ANN_Episode = Struct.new(:number, :title, :lang)
 ANN_Image   = Struct.new(:src, :width, :height)
 
@@ -78,7 +78,7 @@ class ANN_Anime < ANN
 	# returns array of ANN_Cast
 	def cast
 		@cast ||= @ann_anime.cast.map do |s|
-			ANN_Cast.new(s.person.id, s.role, s.person)
+			ANN_Cast.new(s.person.id, s.role, s.person, s.lang)
 		end
 	end
 end
@@ -99,6 +99,7 @@ class ANN_Report < ANN
 		begin 
 			ann_report.send(var_name)
 		rescue NameError
+			nil
 		end
 	end
 end
