@@ -53,6 +53,10 @@ class ANN_Anime < ANN
 	def lang_titles
 		@lang_titles ||= alt_titles.group_by {|title| title.lang}
 	end
+
+	def type
+		@ann_anime.type
+	end
 		
 	# returns array of ANN_Image
 	def images
