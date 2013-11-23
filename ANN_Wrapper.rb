@@ -67,7 +67,10 @@ class ANN_Wrapper
 				ANN_Report.new(item)
 			end
 		rescue NameError
-			ANN_Error.new(get_xml_error(report))
+			return ANN_Error.new(get_xml_error(report))
 		end
+
+		report.item
+
 	end
 end
