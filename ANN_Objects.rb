@@ -46,39 +46,63 @@ class ANN_Anime < ANN
 
 	# return all info with provided key
 	def find_info(key)
-		@ann_anime.info.find_all {|info| info.type.eql?(key)}
+		begin
+			@ann_anime.info.find_all {|info| info.type.eql?(key)}
+		rescue NameError
+			nil
+		end
 	end
 
 	# returns array of titles grouped by language abbreviation
 	def lang_titles
-		@lang_titles ||= alt_titles.group_by {|title| title.lang}
+		begin
+			@lang_titles ||= alt_titles.group_by {|title| title.lang}
+		rescue NameError
+			nil
+		end
 	end
 		
 	# returns array of ANN_Image
 	def images
-		@images ||= find_info("Picture").map do |i|
-			ANN_Image.new(i.src, i.width, i.height)
+		begin
+			@images ||= find_info("Picture").map do |i|
+				ANN_Image.new(i.src, i.width, i.height)
+			end
+		rescue NameError
+			nil
 		end
 	end
 
 	# returns array of ANN_Episode
 	def episodes
-		@episodes ||= @ann_anime.episodes.map do |e|
-			ANN_Episode.new(e.num, e.title, e.title.lang)
+		begin
+			@episodes ||= @ann_anime.episodes.map do |e|
+				ANN_Episode.new(e.num, e.title, e.title.lang)
+			end
+		rescue NameError
+			nil
 		end
 	end
 
 	# returns array of ANN_Staff
 	def staff
-		@staff ||= @ann_anime.staff.map do |s|
-			ANN_Staff.new(s.person.id, s.task, s.person)
+		begin
+			@staff ||= @ann_anime.staff.map do |s|
+				ANN_Staff.new(s.person.id, s.task, s.person)
+			end
+		rescue NameError
+			nil
 		end
 	end
 
 	# returns array of ANN_Cast
 	def cast
-		@cast ||= @ann_anime.cast.map do |s|
-			ANN_Cast.new(s.person.id, s.role, s.person, s.lang)
+		begin
+			@cast ||= @ann_anime.cast.map do |s|
+				ANN_Cast.new(s.person.id, s.role, s.person, s.lang)
+			end
+		rescue NameError
+			nil
 		end
 	end
 end
