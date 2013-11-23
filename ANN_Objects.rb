@@ -61,6 +61,10 @@ class ANN_Anime < ANN
 			nil
 		end
 	end
+
+	def type
+		@ann_anime.type
+	end
 		
 	# returns array of ANN_Image
 	def images
