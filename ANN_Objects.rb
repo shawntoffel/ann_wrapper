@@ -29,7 +29,6 @@ class ANN_Anime < ANN
 		# information available from detail
 		@info = Hash.new
 		@info[:title]         = "Main title"
-		@info[:alt_titles]    = "Alternative title"
 		@info[:synopsis]      = "Plot Summary"
 		@info[:num_episodes]  = "Number of episodes"
 		@info[:genres]        = "Genres"
@@ -40,37 +39,49 @@ class ANN_Anime < ANN
 
 		# create methods
 		@info.each do |name, key|
-			create_method(name) { find_info(key) }
+			create_method(name) do 
+				info = find_info(key)
+				return nil if info.nil?
+				info.map do |i|
+					i.content
+				end
+			end
 		end
 	end
 
 	# return all info with provided key
 	def find_info(key)
 		begin
-			@ann_anime.info.find_all {|info| info.type.eql?(key)}
-		rescue NameError
+			@ann_anime.search("info[@type=\"#{key}\"]")
+		rescue 
 			nil
 		end
 	end
 
 	# returns array of titles grouped by language abbreviation
-	def lang_titles
+	def alt_titles
 		begin
-			@lang_titles ||= alt_titles.group_by {|title| title.lang}
+			@titles ||= find_info("Alternative title").group_by {|title| title['lang']}
+
+			@titles.each do |key, value|
+				value.map! do |title|
+					title.content
+				end
+			end
 		rescue NameError
 			nil
 		end
 	end
 
 	def type
-		@ann_anime.type
+		@type ||= @ann_anime['type']
 	end
 		
 	# returns array of ANN_Image
 	def images
 		begin
 			@images ||= find_info("Picture").map do |i|
-				ANN_Image.new(i.src, i.width, i.height)
+				ANN_Image.new(i['src'], i['width'], i['height'])
 			end
 		rescue NameError
 			nil
@@ -80,8 +91,9 @@ class ANN_Anime < ANN
 	# returns array of ANN_Episode
 	def episodes
 		begin
-			@episodes ||= @ann_anime.episodes.map do |e|
-				ANN_Episode.new(e.num, e.title, e.title.lang)
+			@episodes ||= @ann_anime.xpath("//episode").map do |e|
+				title = e.at_xpath("title")
+				ANN_Episode.new(e['num'], title.content, title['lang'])
 			end
 		rescue NameError
 			nil
@@ -91,8 +103,10 @@ class ANN_Anime < ANN
 	# returns array of ANN_Staff
 	def staff
 		begin
-			@staff ||= @ann_anime.staff.map do |s|
-				ANN_Staff.new(s.person.id, s.task, s.person)
+			@staff ||= @ann_anime.xpath("//staff").map do |s|
+				task = s.at_xpath("task")
+				person = s.at_xpath("person")
+				ANN_Staff.new(person['id'], task.content, person.content)
 			end
 		rescue NameError
 			nil
@@ -102,8 +116,10 @@ class ANN_Anime < ANN
 	# returns array of ANN_Cast
 	def cast
 		begin
-			@cast ||= @ann_anime.cast.map do |s|
-				ANN_Cast.new(s.person.id, s.role, s.person, s.lang)
+			@cast ||= @ann_anime.xpath("//cast").map do |s|
+				role = s.at_xpath("role")
+				person = s.at_xpath("person")
+				ANN_Cast.new(person['id'], role.content, person.content, s['lang'])
 			end
 		rescue NameError
 			nil
@@ -122,10 +138,10 @@ class ANN_Report < ANN
 		end
 	end
 
-	# get info from XMLObject
+	# get info from xml
 	def get_info_on(ann_report, var_name)
 		begin 
-			ann_report.send(var_name)
+			ann_report.at_xpath(var_name).content
 		rescue NameError
 			nil
 		end
