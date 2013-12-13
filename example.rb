@@ -20,17 +20,17 @@ begin
 
 	puts steins_gate.title
 	puts steins_gate.alt_titles
-	puts steins_gate.type
-	puts steins_gate.synopsis
-	puts steins_gate.num_episodes
-	puts steins_gate.genres
-	puts steins_gate.themes
-	puts steins_gate.op_theme
-	puts steins_gate.ed_theme
-	puts steins_gate.episodes
-	puts steins_gate.staff
-	puts steins_gate.cast
-	puts steins_gate.images
+#	puts steins_gate.type
+#	puts steins_gate.synopsis
+#	puts steins_gate.num_episodes
+#	puts steins_gate.genres
+#	puts steins_gate.themes
+#	puts steins_gate.op_theme
+#	puts steins_gate.ed_theme
+#	puts steins_gate.episodes
+#	puts steins_gate.staff
+#	puts steins_gate.cast
+#	puts steins_gate.images
 
 #titles = ANN_Wrapper.instance.fetch_titles("anime", 0, 5)
 #if titles.is_a?(ANN_Error)
