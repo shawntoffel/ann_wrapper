@@ -61,7 +61,7 @@ class ANN_Anime < ANN
 	# returns array of titles grouped by language abbreviation
 	def alt_titles
 		begin
-			titles ||= find_info("Alternative title").group_by {|title| title['lang']}
+			titles = find_info("Alternative title").group_by {|title| title['lang']}
 
 			titles.each do |key, value|
 				value.map! do |title|
