@@ -5,7 +5,7 @@ require 'ann_wrapper/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "ann_wrapper"
-  spec.version       = ANN_Wrapper::VERSION
+  spec.version       = AnnWrapper::VERSION
   spec.authors       = ["shawntoffel"]
   spec.email         = ["getkura+ann_wrapper@gmail.com"]
   spec.description   = 'A simple wrapper for the Anime News Network API'
