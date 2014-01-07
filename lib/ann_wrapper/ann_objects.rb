@@ -53,7 +53,7 @@ class ANN_Anime < ANN
 
 	end
 
-	# return all info with provided key
+	# @return [Nokogiri::XML::NodeSet] return all info with provided key
 	def find_info(key)
 		begin
 			@ann_anime.search("info[@type=\"#{key}\"]")
@@ -62,7 +62,27 @@ class ANN_Anime < ANN
 		end
 	end
 
-	# returns array of titles grouped by language abbreviation
+	##
+	# These methods are created via create_method in the constructor
+
+	# @return [[String]] returns title(s)
+	def title; end
+	# @return [[String]] returns synopsis
+	def synopsis; end
+	# @return [[String]] returns number of episodes
+	def num_episodes; end
+	# @return [[String]] returns array of genres
+	def genres; end
+	# @return [[String]] returns array of themes
+	def themes; end
+	# @return [[String]] returns array of vintage(s)
+	def vintage; end
+	# @return [[String]] returns op theme(s)
+	def op_theme; end
+	# @return [[String]] returns ed theme(s)
+	def ed_theme; end
+
+	# @return [Hash] returns hash of titles grouped by language abbreviation
 	def alt_titles
 		begin
 			titles = find_info("Alternative title").group_by {|title| title['lang']}
@@ -77,12 +97,12 @@ class ANN_Anime < ANN
 		end
 	end
 
-	# returns anime type
+	# @return [String] returns anime type
 	def type
 		@type ||= @ann_anime['type']
 	end
 		
-	# returns array of ANN_Image
+	# @return [[ANN_Image]] returns array of ANN_Image
 	def images
 		begin
 			@images ||= find_info("Picture").map do |i|
@@ -93,7 +113,7 @@ class ANN_Anime < ANN
 		end
 	end
 
-	# returns array of ANN_Episode
+	# @return [[ANN_Episode]] returns array of ANN_Episode
 	def episodes
 		begin
 			@episodes ||= @ann_anime.xpath("//episode").map do |e|
@@ -105,7 +125,7 @@ class ANN_Anime < ANN
 		end
 	end
 
-	# returns array of ANN_Staff
+	# @return [[ANN_Staff]] returns array of ANN_Staff
 	def staff
 		begin
 			@staff ||= @ann_anime.xpath("//staff").map do |s|
@@ -118,7 +138,7 @@ class ANN_Anime < ANN
 		end
 	end
 
-	# returns array of ANN_Cast
+	# @return [[ANN_Cast]] returns array of ANN_Cast
 	def cast
 		begin
 			@cast ||= @ann_anime.xpath("//cast").map do |s|

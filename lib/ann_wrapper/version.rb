@@ -1,3 +1,3 @@
-module AnnWrapper
-  VERSION = "1.1.1"
+module ANN_Wrapper
+  VERSION = "1.1.2"
 end
