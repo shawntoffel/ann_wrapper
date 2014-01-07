@@ -19,10 +19,10 @@ ANN_Episode = Struct.new(:number, :title, :lang)
 ANN_Image   = Struct.new(:src, :width, :height)
 
 class ANN_Anime < ANN
-	# ann_anime XMLObject
+	# ann_anime Nokogiri object
 	attr_writer :ann_anime
 
-	# initialize with XMLObject 
+	# initialize and create info methods 
 	def initialize(ann_anime)
 		@ann_anime = ann_anime
 
@@ -47,6 +47,7 @@ class ANN_Anime < ANN
 				end
 			end
 		end
+
 	end
 
 	# return all info with provided key
