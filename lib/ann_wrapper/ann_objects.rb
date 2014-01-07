@@ -2,9 +2,11 @@
 # ANN_Objects
 ##################################################
 
+
 # parent with helper methods
 class ANN
 private
+		##
 		# define method with supplied name and block
 		def create_method(name, &block)
 			self.class.send(:define_method, name, &block)
@@ -22,6 +24,7 @@ class ANN_Anime < ANN
 	# ann_anime Nokogiri object
 	attr_writer :ann_anime
 
+	
 	# initialize and create info methods 
 	def initialize(ann_anime)
 		@ann_anime = ann_anime
@@ -74,6 +77,7 @@ class ANN_Anime < ANN
 		end
 	end
 
+	# returns anime type
 	def type
 		@type ||= @ann_anime['type']
 	end
