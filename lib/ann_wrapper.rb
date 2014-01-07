@@ -4,7 +4,7 @@
 
 require "net/http"
 require "nokogiri"
-require File.join(File.expand_path(File.dirname(__FILE__)), './ANN_Objects')
+require 'ann_wrapper/ann_objects'
 require 'singleton'
 
 # wrapper class for ANN API

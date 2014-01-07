@@ -1,7 +1,6 @@
-ANN_Wrapper
+ann_wrapper
 
 ==========
 
-[Anime News Network API](http://www.animenewsnetwork.com/encyclopedia/api.php) ruby wrapper/abstraction
-
+A simple ruby wrapper/abstraction for the [Anime News Network API](http://www.animenewsnetwork.com/encyclopedia/api.php) I
 
