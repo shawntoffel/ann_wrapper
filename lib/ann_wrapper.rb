@@ -16,7 +16,7 @@ extend ANN_Wrapper
 	ANN_REPORTS_URL = "#{ANN_URL}/reports.xml"
 
 	# fetch anime and convert to ANN_Anime
-	def fetch_ann_anime(id, api_url=ANN_API_URL)
+	def fetch_anime(id, api_url=ANN_API_URL)
 		# append id to API url and send request
 		url = "#{api_url}?anime=#{id.to_s}"
 
