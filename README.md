@@ -32,21 +32,28 @@ Info:
     
     steins_gate.title
      => ["Steins;Gate"]
+     
     steins_gate.alt_titles
      => {"PT"=>["Steins-Gate e a Teoria do Caos"], "JA"=>["シュタインズ・ゲート"], "ZH-TW"=>["命運石之門"], "KO"=>["슈타인즈 게이트"]}
 
     steins_gate.synopsis
      => ["Rintaro Okabe is a self-proclaimed "mad scientist" ... "]
+     
     steins_gate.num_episodes
      => ["24"]
+     
     steins_gate.vintage
      => ["2011-04-03 (Advanced screening)", "2011-04-05 to 2011-09-13"]
+     
     steins_gate.genres
      => ["adventure", "comedy", "drama", "mystery", "psychological", "romance", "science fiction", "thriller"]
+     
     steins_gate.themes
      => ["butterfly effect", "conspiracy", "technology", "Time travel"]
+     
     steins_gate.op_theme
      => ["\"Hacking to the Gate\" by Kanako Ito"]
+     
     steins_gate.ed_theme
      => ["\"Tokitsukasadoru Jūni no Meiyaku\" (刻司ル十二ノ盟約) by Yui Sakakibara", "#2: \"Sukai Kuraddo no Kansokusha\" (スカイクラッドの観測者) by Kanako Ito (ep 23)", "#3: \"Another Heaven\" by Kanako Itou (ep 24)"]
 
