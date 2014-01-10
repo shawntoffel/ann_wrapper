@@ -5,43 +5,20 @@
 require "net/http"
 require "nokogiri"
 require 'ann_wrapper/ann_objects'
-require 'singleton'
 
 # wrapper class for ANN API
-class ANN_Wrapper
-	include Singleton
+module ANN_Wrapper
+extend ANN_Wrapper
+
 	# ANN API anime url
 	ANN_URL         = "http://cdn.animenewsnetwork.com/encyclopedia"
 	ANN_API_URL     = "#{ANN_URL}/api.xml"
 	ANN_REPORTS_URL = "#{ANN_URL}/reports.xml"
 
-	# fetch data from ANN API via http GET request
-	# returns Nokogiri or ANN_Error
-	def fetch(url)
-		begin
-			# send http GET request with uri parsed from url
-			resp = Net::HTTP.get_response(URI.parse(url))
-
-			# get the response body and try converting to Nokogiri object
-			Nokogiri.XML(resp.body)
-		rescue
-			ANN_Error.new("xml format error, API likely unavailable")
-		end
-	end	
-
-	# attempt to grab error message from XMLObject
-	def get_xml_error(xobj)
-		begin
-			xobj.at_xpath('//ann/warning').content
-		rescue NameError
-			"bad response"
-		end
-	end
-
 	# fetch anime and convert to ANN_Anime
-	def fetch_ann_anime(id)
+	def fetch_ann_anime(id, api_url=ANN_API_URL)
 		# append id to API url and send request
-		url = "#{ANN_API_URL}?anime=#{id.to_s}"
+		url = "#{api_url}?anime=#{id.to_s}"
 
 		ann = fetch(url)
 
@@ -54,8 +31,8 @@ class ANN_Wrapper
 	end
 
 	# fetch list of titles via reports
-	def fetch_titles(type="anime", nskip=0, nlist=50, name="")
-		url = "#{ANN_REPORTS_URL}?id=155&type=#{type}&nskip=#{nskip}&nlist=#{nlist}"
+	def fetch_titles(type="anime", nskip=0, nlist=50, name="", api_url=ANN_REPORTS_URL)
+		url = "#{api_url}?id=155&type=#{type}&nskip=#{nskip}&nlist=#{nlist}"
 		report = fetch(url)
 
 		return report if report.is_a?(ANN_Error)
@@ -68,4 +45,28 @@ class ANN_Wrapper
 			ANN_Report.new(item)
 		end
 	end
-end
+
+	private
+		# fetch data from ANN API via http GET request
+		# returns Nokogiri or ANN_Error
+		def fetch(url)
+			begin
+				# send http GET request with uri parsed from url
+				resp = Net::HTTP.get_response(URI.parse(url))
+
+				# get the response body and try converting to Nokogiri object
+				Nokogiri.XML(resp.body)
+			rescue
+				ANN_Error.new("xml format error, API likely unavailable")
+			end
+		end	
+
+		# attempt to grab error message from XMLObject
+		def get_xml_error(xobj)
+			begin
+				xobj.at_xpath('//ann/warning').content
+			rescue NameError
+				"bad response"
+			end
+		end
+	end
