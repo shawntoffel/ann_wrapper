@@ -156,17 +156,18 @@ class ANN_Report < ANN
 	# initialize and build access methods
 	def initialize(ann_report)
 		@id, @type, @name, @precision, @vintage = ""
+		@ann_report = ann_report
 
 		self.instance_variables.each do |iv|
 			var_name = iv.to_s.partition("@").last
-			create_method(var_name) { get_info_on(ann_report, var_name) }
+			create_method(var_name) { get_info_on(var_name) }
 		end
 	end
 
 	# get info from xml
-	def get_info_on(ann_report, var_name)
+	def get_info_on(var_name)
 		begin 
-			ann_report.at_xpath(var_name).content
+			@ann_report.at_xpath(var_name).content
 		rescue NameError
 			nil
 		end

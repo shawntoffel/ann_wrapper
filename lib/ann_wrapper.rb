@@ -40,10 +40,8 @@ extend ANN_Wrapper
 		reports = report.xpath('//report/item')
 
 		return ANN_Error.new(get_xml_error(report)) if reports.nil?
-		
-		reports.map do |item|
-			ANN_Report.new(item)
-		end
+
+		reports.map { |item| ANN_Report.new(item) }
 	end
 
 	private
