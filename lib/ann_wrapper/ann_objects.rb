@@ -97,6 +97,11 @@ class ANN_Anime < ANN
 		end
 	end
 
+	# @return [String] returns anime id
+	def id
+		@id ||= @ann_anime['id']
+	end
+
 	# @return [String] returns anime type
 	def type
 		@type ||= @ann_anime['type']
