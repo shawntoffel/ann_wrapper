@@ -3,6 +3,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/ann_wrapper.png)](http://badge.fury.io/rb/ann_wrapper)
 [![Build Status](https://travis-ci.org/Getkura/ann_wrapper.png?branch=dev)](https://travis-ci.org/Getkura/ann_wrapper)
+[![Dependency Status](https://gemnasium.com/Getkura/ann_wrapper.png)](https://gemnasium.com/Getkura/ann_wrapper)
 [![Code Climate](https://codeclimate.com/github/Getkura/ann_wrapper.png)](https://codeclimate.com/github/Getkura/ann_wrapper)
 
 
