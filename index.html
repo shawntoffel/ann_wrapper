@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Ann wrapper : A ruby wrapper/abstraction for the Anime News Network API" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Ann wrapper</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Getkura/ann_wrapper">View on GitHub</a>
+
+          <h1 id="project_title">Ann wrapper</h1>
+          <h2 id="project_tagline">A ruby wrapper/abstraction for the Anime News Network API</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Getkura/ann_wrapper/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Getkura/ann_wrapper/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="ann_wrapper" class="anchor" href="#ann_wrapper"><span class="octicon octicon-link"></span></a>ann_wrapper</h1>
+
+<p><a href="http://badge.fury.io/rb/ann_wrapper"><img src="https://badge.fury.io/rb/ann_wrapper.png" alt="Gem Version"></a>
+<a href="https://travis-ci.org/Getkura/ann_wrapper"><img src="https://travis-ci.org/Getkura/ann_wrapper.png?branch=dev" alt="Build Status"></a>
+<a href="https://gemnasium.com/Getkura/ann_wrapper"><img src="https://gemnasium.com/Getkura/ann_wrapper.png" alt="Dependency Status"></a>
+<a href="https://codeclimate.com/github/Getkura/ann_wrapper"><img src="https://codeclimate.com/github/Getkura/ann_wrapper.png" alt="Code Climate"></a></p>
+
+<p>A simple ruby wrapper/abstraction for the <a href="http://www.animenewsnetwork.com/encyclopedia/api.php">Anime News Network API</a></p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<pre><code>gem 'ann_wrapper'
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install ann_wrapper
+</code></pre>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Fetch an anime:</p>
+
+<pre><code>steins_gate = ANN_Wrapper.fetch_anime 11770
+</code></pre>
+
+<p>Info:</p>
+
+<pre><code>steins_gate.title
+ =&gt; ["Steins;Gate"]
+
+steins_gate.alt_titles
+ =&gt; {"PT"=&gt;["Steins-Gate e a Teoria do Caos"], "JA"=&gt;["シュタインズ・ゲート"], "ZH-TW"=&gt;["命運石之門"], "KO"=&gt;["슈타인즈 게이트"]}
+
+steins_gate.synopsis
+ =&gt; ["Rintaro Okabe is a self-proclaimed "mad scientist" ... "]
+
+steins_gate.num_episodes
+ =&gt; ["24"]
+
+steins_gate.vintage
+ =&gt; ["2011-04-03 (Advanced screening)", "2011-04-05 to 2011-09-13"]
+
+steins_gate.genres
+ =&gt; ["adventure", "comedy", "drama", "mystery", "psychological", "romance", "science fiction", "thriller"]
+
+steins_gate.themes
+ =&gt; ["butterfly effect", "conspiracy", "technology", "Time travel"]
+
+steins_gate.op_theme
+ =&gt; ["\"Hacking to the Gate\" by Kanako Ito"]
+
+steins_gate.ed_theme
+ =&gt; ["\"Tokitsukasadoru Jūni no Meiyaku\" (刻司ル十二ノ盟約) by Yui Sakakibara", "#2: \"Sukai Kuraddo no Kansokusha\" (スカイクラッドの観測者) by Kanako Ito (ep 23)", "#3: \"Another Heaven\" by Kanako Itou (ep 24)"]
+</code></pre>
+
+<p>Cast and Staff:</p>
+
+<pre><code>steins_gate.cast.find_all {|c| c.name.include? "Hanazawa"}
+ =&gt; [#&lt;struct ANN_Cast id="53741", role="Mayuri Shiina", name="Kana Hanazawa", lang="JA"&gt;]
+
+steins_gate.staff.find_all {|s| s.task.eql? "Director"}
+ =&gt; [
+        #&lt;struct ANN_Staff id="593", task="Director", name="Takuya Satō"&gt;, 
+        #&lt;struct ANN_Staff id="9693", task="Director", name="Hiroshi Hamasaki"&gt;, 
+        #&lt;struct ANN_Staff id="35713", task="Director", name="Tomoki Kobayashi"&gt;
+    ]
+</code></pre>
+
+<p>Episodes:</p>
+
+<pre><code>steins_gate.episodes.first
+ =&gt; #&lt;struct ANN_Episode number="1", title="Prologue of the Beginning and End", lang="EN"&gt;
+
+steins_gate.episodes.find_all {|e| e.title.include? "Prologue"}
+ =&gt; [
+        #&lt;struct ANN_Episode number="1", title="Prologue of the Beginning and End", lang="EN"&gt;, 
+        #&lt;struct ANN_Episode number="24", title="The Prologue Begins With the End", lang="EN"&gt;
+    ]
+</code></pre>
+
+<p>Images:</p>
+
+<pre><code>steins_gate.images
+ =&gt; [
+        #&lt;struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-1864351140.1370764886.jpg", width="200", height="125"&gt;, 
+        #&lt;struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-8.jpg", width="200", height="200"&gt;
+    ]
+</code></pre>
+
+<h2>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Ann wrapper maintained by <a href="https://github.com/Getkura">Getkura</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
