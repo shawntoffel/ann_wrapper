@@ -32,7 +32,7 @@ Fetch an anime:
 Info:
     
     steins_gate.id
-     => 11770
+     => "11770"
      
     steins_gate.title
      => ["Steins;Gate"]
