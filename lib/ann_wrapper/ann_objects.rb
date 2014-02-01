@@ -11,6 +11,32 @@ class ANN
 		def create_method(name, &block)
 			self.class.send(:define_method, name, &block)
 		end
+
+		# return hash of methods and returns excluding those in excludes
+		def to_hash(excludes)
+			# get list of methods excluding above
+			methods = self.class.instance_methods(false).reject {|m| excludes.include? m}
+
+			# map methods and results to hash
+			data = methods.map do |method |
+				result = self.send(method)
+				
+				# convert Structs to hash
+				if (result.is_a? Array)
+					result.map! do |item|
+						item.is_a?(Struct) ? item.to_h : item
+					end
+				else
+					result.to_h! if result.is_a?(Struct)
+				end
+
+				# make hash with method name and result of call
+				[method.to_sym, result]
+			end
+
+			# return hash
+			Hash[data]
+		end
 end
 
 # various ANN struct types
@@ -62,6 +88,11 @@ class ANN_Anime < ANN
 		end
 	end
 
+	# @return [String] returns anime id
+	def id
+		@id ||= @ann_anime['id']
+	end
+
 	##
 	# These methods are created via create_method in the constructor
 
@@ -94,11 +125,6 @@ class ANN_Anime < ANN
 		rescue NameError
 			nil
 		end
-	end
-
-	# @return [String] returns anime id
-	def id
-		@id ||= @ann_anime['id']
 	end
 
 	# @return [String] returns anime type
@@ -154,6 +180,12 @@ class ANN_Anime < ANN
 			nil
 		end
 	end
+	
+	# @return [Hash] hash of self
+	def to_h
+		# create hash excluding some methods
+		to_hash([:to_h, :ann_anime=, :find_info])
+	end
 end
 
 class ANN_Report < ANN
@@ -175,5 +207,11 @@ class ANN_Report < ANN
 		rescue NameError
 			nil
 		end
+	end
+
+	# @return [Hash] hash of self
+	def to_h
+		# create hash excluding some methods
+		to_hash([:to_h, :ann_report, :get_info_on])
 	end
 end
