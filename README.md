@@ -31,6 +31,9 @@ Fetch an anime:
 
 Info:
     
+    steins_gate.id
+     => 11770
+     
     steins_gate.title
      => ["Steins;Gate"]
      
@@ -74,22 +77,26 @@ Cast and Staff:
 
 Episodes:
 
-    steins_gate.episodes.first
-     => #<struct ANN_Episode number="1", title="Prologue of the Beginning and End", lang="EN">
-
     steins_gate.episodes.find_all {|e| e.title.include? "Prologue"}
      => [
             #<struct ANN_Episode number="1", title="Prologue of the Beginning and End", lang="EN">, 
             #<struct ANN_Episode number="24", title="The Prologue Begins With the End", lang="EN">
         ]
         
+    steins_gate.episodes.first.to_h
+     => {:number=>"1", :title=>"Prologue of the Beginning and End", :lang=>"EN"}
+        
 Images:
 
     steins_gate.images
      => [
             #<struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-1864351140.1370764886.jpg", width="200", height="125">, 
-            #<struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-8.jpg", width="200", height="200">
+            #<struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/max500x600/encyc/A11770-1864351140.1370764886.jpg", width="500", height="312">, 
+            #<struct ANN_Image src="http://cdn.animenewsnetwork.com/images/encyc/A11770-1864351140.1370764886.jpg", width="900", height="562">, 
+            #<struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-8.jpg", width="200", height="200">, 
+            #<struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/max500x600/encyc/A11770-8.jpg", width="317", height="317">
         ]
+
 
 
 
