@@ -5,7 +5,7 @@
 
 # parent with helper methods
 class ANN
-private
+	private
 		##
 		# define method with supplied name and block
 		def create_method(name, &block)
@@ -86,7 +86,6 @@ class ANN_Anime < ANN
 	def alt_titles
 		begin
 			titles = find_info("Alternative title").group_by {|title| title['lang']}
-
 			titles.each do |key, value|
 				value.map! do |title|
 					title.content
@@ -110,7 +109,7 @@ class ANN_Anime < ANN
 	# @return [[ANN_Image]] returns array of ANN_Image
 	def images
 		begin
-			@images ||= find_info("Picture").map do |i|
+			@images ||= find_info("Picture").xpath("//img").map do |i|
 				ANN_Image.new(i['src'], i['width'], i['height'])
 			end
 		rescue NameError
@@ -164,7 +163,7 @@ class ANN_Report < ANN
 		@ann_report = ann_report
 
 		self.instance_variables.each do |iv|
-			var_name = iv.to_s.partition("@").last
+			var_name = iv[1..-1]
 			create_method(var_name) { get_info_on(var_name) }
 		end
 	end
