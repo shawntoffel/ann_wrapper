@@ -29,7 +29,7 @@ describe ANN_Anime do
 		it "returns a hash of alternate titles" do
 			expect(@anime.alt_titles).to be_instance_of Hash
 			array_of_strings(@anime.alt_titles["JA"])
-			expect(@anime.alt_titles["JA"][0]).to eql "シュタインズ・ゲート"
+			expect(@anime.alt_titles["JA"][0].size).to be > 0
 		end
 	end
 
@@ -78,7 +78,7 @@ describe ANN_Anime do
 	describe "#ed_theme" do
 		it "returns an Array containing ed_theme strings" do
 			array_of_strings @anime.ed_theme
-			expect(@anime.ed_theme[0]).to eql "\"Tokitsukasadoru Jūni no Meiyaku\" (刻司ル十二ノ盟約) by Yui Sakakibara"
+			expect(@anime.ed_theme[0].size).to be > 0
 		end
 	end
 
@@ -94,9 +94,9 @@ describe ANN_Anime do
 	describe "#staff" do
 		it "returns an Array containing ANN_Staff" do
 			expect(@anime.staff).to be_instance_of Array
-			expect(@anime.staff[0]).to be_instance_of ANN_Staff
-			first_staff = ANN_Staff.new("593", "Director", "Takuya Satō")
-			expect(@anime.staff[0]).to eql first_staff
+			expect(@anime.staff[1]).to be_instance_of ANN_Staff
+			first_staff = ANN_Staff.new("9693", "Director", "Hiroshi Hamasaki")
+			expect(@anime.staff[1]).to eql first_staff
 		end
 	end
 
