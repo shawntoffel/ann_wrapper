@@ -24,10 +24,10 @@ class ANN
 				# convert Structs to hash
 				if (result.is_a? Array)
 					result.map! do |item|
-						item.is_a?(Struct) ? item.to_h : item
+						item.is_a?(Struct) ? item.hash : item
 					end
 				else
-					result.to_h! if result.is_a?(Struct)
+					result.hash! if result.is_a?(Struct)
 				end
 
 				# make hash with method name and result of call
