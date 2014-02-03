@@ -1,6 +1,10 @@
 require 'ann_wrapper'
 require 'webmock/rspec'
 require 'support/fake_ann'
+require 'coveralls'
+
+# coveralls test coverage
+Coveralls.wear!
 
 WebMock.disable_net_connect!(allow_localhost: true)
 
