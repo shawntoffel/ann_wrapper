@@ -81,11 +81,7 @@ class ANN_Anime < ANN
 
 	# @return [Nokogiri::XML::NodeSet] return all info with provided key
 	def find_info(key)
-		begin
-			@ann_anime.search("info[@type=\"#{key}\"]")
-		rescue 
-			nil
-		end
+		@ann_anime.search("info[@type=\"#{key}\"]")
 	end
 
 	# @return [String] returns anime id
@@ -115,15 +111,11 @@ class ANN_Anime < ANN
 
 	# @return [Hash] returns hash of titles grouped by language abbreviation
 	def alt_titles
-		begin
-			titles = find_info("Alternative title").group_by {|title| title['lang']}
-			titles.each do |key, value|
-				value.map! do |title|
-					title.content
-				end
+		titles = find_info("Alternative title").group_by {|title| title['lang']}
+		titles.each do |key, value|
+			value.map! do |title|
+				title.content
 			end
-		rescue NameError
-			nil
 		end
 	end
 
@@ -134,50 +126,34 @@ class ANN_Anime < ANN
 		
 	# @return [[ANN_Image]] returns array of ANN_Image
 	def images
-		begin
-			@images ||= find_info("Picture").xpath("//img").map do |i|
-				ANN_Image.new(i['src'], i['width'], i['height'])
-			end
-		rescue NameError
-			nil
+		@images ||= find_info("Picture").xpath("//img").map do |i|
+			ANN_Image.new(i['src'], i['width'], i['height'])
 		end
 	end
 
 	# @return [[ANN_Episode]] returns array of ANN_Episode
 	def episodes
-		begin
-			@episodes ||= @ann_anime.xpath("//episode").map do |e|
-				title = e.at_xpath("title")
-				ANN_Episode.new(e['num'], title.content, title['lang'])
-			end
-		rescue NameError
-			nil
+		@episodes ||= @ann_anime.xpath("//episode").map do |e|
+			title = e.at_xpath("title")
+			ANN_Episode.new(e['num'], title.content, title['lang'])
 		end
 	end
 
 	# @return [[ANN_Staff]] returns array of ANN_Staff
 	def staff
-		begin
-			@staff ||= @ann_anime.xpath("//staff").map do |s|
-				task = s.at_xpath("task")
-				person = s.at_xpath("person")
-				ANN_Staff.new(person['id'], task.content, person.content)
-			end
-		rescue NameError
-			nil
+		@staff ||= @ann_anime.xpath("//staff").map do |s|
+			task = s.at_xpath("task")
+			person = s.at_xpath("person")
+			ANN_Staff.new(person['id'], task.content, person.content)
 		end
 	end
 
 	# @return [[ANN_Cast]] returns array of ANN_Cast
 	def cast
-		begin
-			@cast ||= @ann_anime.xpath("//cast").map do |s|
-				role = s.at_xpath("role")
-				person = s.at_xpath("person")
-				ANN_Cast.new(person['id'], role.content, person.content, s['lang'])
-			end
-		rescue NameError
-			nil
+		@cast ||= @ann_anime.xpath("//cast").map do |s|
+			role = s.at_xpath("role")
+			person = s.at_xpath("person")
+			ANN_Cast.new(person['id'], role.content, person.content, s['lang'])
 		end
 	end
 	
@@ -202,11 +178,8 @@ class ANN_Report < ANN
 
 	# get info from xml
 	def get_info_on(var_name)
-		begin 
-			@ann_report.at_xpath(var_name).content
-		rescue NameError
-			nil
-		end
+		body = @ann_report.at_xpath(var_name)
+		body.content unless body.nil?
 	end
 
 	# @return [Hash] hash of self
