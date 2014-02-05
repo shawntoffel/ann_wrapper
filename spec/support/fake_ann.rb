@@ -16,10 +16,6 @@ class FakeANN < Sinatra::Base
 		xml_response 200, "list_report.xml"
 	end
 
-	get '/invalid_url' do
-		status 404
-	end
-
 	private
 
 		def xml_response(response_code, file_name)
