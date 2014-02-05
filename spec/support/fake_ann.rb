@@ -5,18 +5,19 @@ class FakeANN < Sinatra::Base
 		case params[:anime]
 		when "11770"
 			xml_response 200, 'steins_gate.xml'
+		when "46580"
+			xml_response 200, 'invalid_warning.xml'
 		else
 			xml_response 200, 'no_result.xml'
 		end
 	end
 
 	get '/encyclopedia/reports.xml' do
-		case params[:id]
-		when "155"
-			xml_response 200, "list_report.xml"
-		else
-			status 404
-		end
+		xml_response 200, "list_report.xml"
+	end
+
+	get '/invalid_url' do
+		status 404
 	end
 
 	private

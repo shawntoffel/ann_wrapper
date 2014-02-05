@@ -55,7 +55,7 @@ extend ANN_Wrapper
 				# get the response body and try converting to Nokogiri object
 				Nokogiri.XML(resp.body)
 			rescue
-				ANN_Error.new("xml format error, API likely unavailable")
+				ANN_Error.new("Could not reach valid URL")
 			end
 		end	
 
@@ -63,8 +63,8 @@ extend ANN_Wrapper
 		def get_xml_error(xobj)
 			begin
 				xobj.at_xpath('//ann/warning').content
-			rescue NameError
-				"bad response"
+			rescue NoMethodError
+				"unrecognized response body"
 			end
 		end
 	end
