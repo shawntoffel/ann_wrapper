@@ -14,6 +14,8 @@ RSpec.configure do |config|
 		stub_request(:any, /cdn.animenewsnetwork.com/).to_rack(FakeANN)
 	end
 
+	config.alias_it_should_behave_like_to :it_returns, "it returns"
+
   # Use color in STDOUT
   config.color_enabled = true
 

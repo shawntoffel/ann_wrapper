@@ -10,6 +10,15 @@ class FakeANN < Sinatra::Base
 		end
 	end
 
+	get '/encyclopedia/reports.xml' do
+		case params[:id]
+		when "155"
+			xml_response 200, "list_report.xml"
+		else
+			status 404
+		end
+	end
+
 	private
 
 		def xml_response(response_code, file_name)
