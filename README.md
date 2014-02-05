@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.org/Getkura/ann_wrapper.png?branch=dev)](https://travis-ci.org/Getkura/ann_wrapper)
 [![Dependency Status](https://gemnasium.com/Getkura/ann_wrapper.png)](https://gemnasium.com/Getkura/ann_wrapper)
 [![Code Climate](https://codeclimate.com/github/Getkura/ann_wrapper.png)](https://codeclimate.com/github/Getkura/ann_wrapper)
+[![Coverage Status](https://coveralls.io/repos/Getkura/ann_wrapper/badge.png?branch=dev)](https://coveralls.io/r/Getkura/ann_wrapper?branch=dev)
 
 
 A simple ruby wrapper/abstraction for the [Anime News Network API](http://www.animenewsnetwork.com/encyclopedia/api.php)
