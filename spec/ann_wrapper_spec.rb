@@ -3,7 +3,6 @@ require 'spec_helper'
 describe ANN_Wrapper do
 
 	describe "#fetch_anime" do
-
 		context "when a valid id is provided" do
 			it "returns an ANN_Anime object" do
 				anime = ANN_Wrapper.fetch_anime 11770
@@ -27,14 +26,34 @@ describe ANN_Wrapper do
 				expect(anime.message).to eql "Could not reach valid URL"
 			end
 		end
+	end
 
-		context "when an invalid warning comes back" do
-			let(:anime) {ANN_Wrapper.fetch_anime 46580}
-			it "returns an ANN_Error object" do
-				expect(anime).to be_an_instance_of ANN_Error
+	describe "#batch_anime" do
+		context "when valid ids are provided" do
+			it "returns an Array of ANN_Anime object" do
+				anime = ANN_Wrapper.batch_anime [11770,12120,15336]
+				expect(anime).to be_an_instance_of Array
+				expect(anime.first).to be_an_instance_of ANN_Anime
 			end
-			it "includes a message stating the response is not recognized" do
-				expect(anime.message).to eql "unrecognized response body"
+		end
+
+		context "when both valid and invalid ids are provided" do
+			it "returns an Array containing an ANN_Anime and ANN_Error objects" do
+				anime = ANN_Wrapper.batch_anime [11770, 121200]
+				expect(anime).to be_an_instance_of Array
+				expect(anime.first).to be_an_instance_of ANN_Anime
+				expect(anime.last).to be_an_instance_of ANN_Error
+			end
+		end
+
+		context "when an invalid url is provided" do
+			let(:anime) {ANN_Wrapper.batch_anime [11770], "/invalid_url"}
+			it "returns an Array of ANN_Error object" do
+				expect(anime).to be_an_instance_of Array
+				expect(anime.first).to be_an_instance_of ANN_Error
+			end
+			it "includes a message stating the URL was not valid" do
+				expect(anime.first.message).to eql "Could not reach valid URL"
 			end
 		end
 	end

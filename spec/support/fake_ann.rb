@@ -2,11 +2,13 @@ require 'sinatra/base'
 
 class FakeANN < Sinatra::Base
 	get '/encyclopedia/api.xml' do
-		case params[:anime]
+		case params[:title]
 		when "11770"
 			xml_response 200, 'steins_gate.xml'
-		when "46580"
-			xml_response 200, 'invalid_warning.xml'
+		when "11770/12120/15336"
+			xml_response 200, 'anime_batch.xml'
+		when "11770/121200"
+			xml_response 200, 'anime_batch_with_invalid.xml'
 		else
 			xml_response 200, 'no_result.xml'
 		end

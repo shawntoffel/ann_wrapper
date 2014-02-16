@@ -15,19 +15,30 @@ extend ANN_Wrapper
 	ANN_API_URL     = "#{ANN_URL}/api.xml"
 	ANN_REPORTS_URL = "#{ANN_URL}/reports.xml"
 
-	# fetch anime and convert to ANN_Anime
-	def fetch_anime(id, api_url=ANN_API_URL)
+	# fetch up to 50 anime in one request
+	def batch_anime(ids, api_url=ANN_API_URL)
 		# append id to API url and send request
-		url = "#{api_url}?anime=#{id.to_s}"
+		url = "#{api_url}?title=#{ids.first.to_s}"
+		ids[1..-1].each do |id|
+			url << "/#{id.to_s}"
+		end
 
 		ann = fetch(url)
 
-		return ann if ann.is_a?(ANN_Error)
+		return [ann] if ann.is_a?(ANN_Error)
 
-		anime = ann.at_xpath('//ann/anime')
+		all_anime = ann.xpath('//ann/anime')
+		warnings = ann.xpath('//ann/warning')
 
-		# initialize new ann_anime or error with ann object
-		anime.nil? ? ANN_Error.new(get_xml_error(ann)) : ANN_Anime.new(anime)
+		return [ANN_Error.new(get_xml_error(ann))] if all_anime.nil?
+
+		#all_anime.map { |anime| anime.nil? ? ANN_Error(get_xml_error(anime)) : ANN_Anime.new(anime) }
+		all_anime.map { |anime| ANN_Anime.new(anime) } + warnings.map { |warning| ANN_Error.new(get_xml_error(warning)) }
+	end
+
+	# fetch anime and convert to ANN_Anime
+	def fetch_anime(id, api_url=ANN_API_URL)
+		batch_anime([id], api_url).first
 	end
 
 	# fetch list of titles via reports

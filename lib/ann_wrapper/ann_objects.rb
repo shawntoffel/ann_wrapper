@@ -126,14 +126,14 @@ class ANN_Anime < ANN
 		
 	# @return [[ANN_Image]] returns array of ANN_Image
 	def images
-		@images ||= find_info("Picture").xpath("//img").map do |i|
+		@images ||= find_info("Picture").xpath("./img").map do |i|
 			ANN_Image.new(i['src'], i['width'], i['height'])
 		end
 	end
 
 	# @return [[ANN_Episode]] returns array of ANN_Episode
 	def episodes
-		@episodes ||= @ann_anime.xpath("//episode").map do |e|
+		@episodes ||= @ann_anime.xpath("./episode").map do |e|
 			title = e.at_xpath("title")
 			ANN_Episode.new(e['num'], title.content, title['lang'])
 		end
@@ -141,7 +141,7 @@ class ANN_Anime < ANN
 
 	# @return [[ANN_Staff]] returns array of ANN_Staff
 	def staff
-		@staff ||= @ann_anime.xpath("//staff").map do |s|
+		@staff ||= @ann_anime.xpath("./staff").map do |s|
 			task = s.at_xpath("task")
 			person = s.at_xpath("person")
 			ANN_Staff.new(person['id'], task.content, person.content)
@@ -150,7 +150,7 @@ class ANN_Anime < ANN
 
 	# @return [[ANN_Cast]] returns array of ANN_Cast
 	def cast
-		@cast ||= @ann_anime.xpath("//cast").map do |s|
+		@cast ||= @ann_anime.xpath("./cast").map do |s|
 			role = s.at_xpath("role")
 			person = s.at_xpath("person")
 			ANN_Cast.new(person['id'], role.content, person.content, s['lang'])
