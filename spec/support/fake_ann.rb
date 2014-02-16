@@ -9,6 +9,8 @@ class FakeANN < Sinatra::Base
 			xml_response 200, 'anime_batch.xml'
 		when "11770/121200"
 			xml_response 200, 'anime_batch_with_invalid.xml'
+		when "46580"
+			xml_response 200, 'invalid_warning.xml'
 		else
 			xml_response 200, 'no_result.xml'
 		end

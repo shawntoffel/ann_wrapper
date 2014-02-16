@@ -26,6 +26,16 @@ describe ANN_Wrapper do
 				expect(anime.message).to eql "Could not reach valid URL"
 			end
 		end
+
+		context "when an invalid warning comes back" do
+			let(:anime) {ANN_Wrapper.fetch_anime 46580}
+			it "returns an ANN_Error object" do
+				expect(anime).to be_an_instance_of ANN_Error
+			end
+			it "includes a message stating the response is not recognized" do
+				expect(anime.message).to eql "unrecognized response body"
+			end
+		end
 	end
 
 	describe "#batch_anime" do

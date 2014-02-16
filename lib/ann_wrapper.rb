@@ -30,10 +30,12 @@ extend ANN_Wrapper
 		all_anime = ann.xpath('//ann/anime')
 		warnings = ann.xpath('//ann/warning')
 
-		return [ANN_Error.new(get_xml_error(ann))] if all_anime.nil?
+		return [ANN_Error.new(get_xml_error(ann))] if all_anime.empty? and warnings.empty?
 
-		#all_anime.map { |anime| anime.nil? ? ANN_Error(get_xml_error(anime)) : ANN_Anime.new(anime) }
-		all_anime.map { |anime| ANN_Anime.new(anime) } + warnings.map { |warning| ANN_Error.new(get_xml_error(warning)) }
+		all_anime = all_anime.map { |anime| ANN_Anime.new(anime) }
+		warnings = warnings.map { |warning| ANN_Error.new(get_xml_error(warning)) }
+		
+		all_anime.push(*warnings)
 	end
 
 	# fetch anime and convert to ANN_Anime
