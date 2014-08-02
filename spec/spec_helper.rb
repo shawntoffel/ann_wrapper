@@ -18,7 +18,7 @@ RSpec.configure do |config|
 	config.alias_it_should_behave_like_to :it_returns, "it returns"
 
   # Use color in STDOUT
-  config.color_enabled = true
+  config.color = true
 
   # Use color not only in STDOUT but also in pagers and files
   config.tty = true
