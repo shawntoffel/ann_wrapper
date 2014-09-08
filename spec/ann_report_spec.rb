@@ -2,7 +2,7 @@ require 'spec_helper'
 
 shared_examples_for "a String" do |method, expected|
 	it "containing the correct #{method}" do
-		report = ANN_Wrapper.fetch_titles("anime", 0, 5)[0]
+		report = ANN_Wrapper.fetch_titles({type: "anime", nskip: 0, nlist: 5})[0]
 		result = report.send(:"#{method}")
 		expect(result).to be_an_instance_of String
 		expect(result).to eql expected
@@ -10,7 +10,7 @@ shared_examples_for "a String" do |method, expected|
 end
 
 describe ANN_Report do
-	describe "#id" do 
+	describe "#id" do
 		it_returns "a String", :id, "15847"
 	end
 
@@ -31,7 +31,7 @@ describe ANN_Report do
 	end
 
 	describe "get_info_on" do
-		let(:report) {ANN_Wrapper.fetch_titles("anime", 0, 5)[0]}
+		let(:report) {ANN_Wrapper.fetch_titles({type: "anime", nskip: 0, nlist: 5})[0]}
 		context "when a valid info key is provided" do
 			it "returns the correct value for the key" do
 				result = report.get_info_on("id")
@@ -39,7 +39,7 @@ describe ANN_Report do
 				expect(result).to eql "15847"
 			end
 		end
-			
+
 		context "when an invalid info key is provided" do
 			it "returns nil" do
 				result = report.get_info_on("INVALID")
@@ -49,7 +49,7 @@ describe ANN_Report do
 	end
 
 	describe "#to_h" do
-		let(:report) {ANN_Wrapper.fetch_titles("anime", 0, 5)[0]}
+		let(:report) {ANN_Wrapper.fetch_titles({type: "anime", nskip: 0, nlist: 5})[0]}
 		it "returns a hash of report information" do
 			report_hash = report.to_h
 			expect(report_hash).to be_instance_of Hash

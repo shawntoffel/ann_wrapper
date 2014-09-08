@@ -81,7 +81,7 @@ describe ANN_Wrapper do
 
 		context "when invalid parameters are privided" do
 			it "returns  of ANN_Reports" do
-				reports = ANN_Wrapper.fetch_titles("anime", 0, 5, "", "/invalid_url")
+				reports = ANN_Wrapper.fetch_titles({type: "anime", nskip: 0, nlist: 5, name: "", api_url: "/invalid_url"})
 				expect(reports).to be_an_instance_of ANN_Error
 			end
 		end
