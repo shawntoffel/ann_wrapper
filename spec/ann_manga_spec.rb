@@ -52,7 +52,7 @@ describe ANN_Manga do
   end
 
   describe "#alt_titles" do
-    it_returns "a Hash of", :alt_titles, Array, "JA", "東京喰種トーキョーグール"
+    it_returns "a Hash of", :alt_titles, Array, "PT", "Tokyo Ghoul"
   end
 
   describe "#synopsis" do
