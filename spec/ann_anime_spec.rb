@@ -42,7 +42,7 @@ describe ANN_Anime do
 			end
 		end
 	end
-	
+
 	describe "#id" do
 		it_returns "a String", :id, "11770"
 	end
@@ -110,4 +110,4 @@ describe ANN_Anime do
 		end
 	end
 end
-		
+

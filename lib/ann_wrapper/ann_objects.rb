@@ -37,7 +37,7 @@ class ANN
 			# return hash
 			Hash[data]
 		end
-end
+	end
 
 # various ANN struct types
 ANN_Error   = Struct.new(:message)
