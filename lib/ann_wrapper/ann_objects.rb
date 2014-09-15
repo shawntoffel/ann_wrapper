@@ -20,7 +20,7 @@ class ANN
 			# map methods and results to hash
 			data = methods.map do |method |
 				result = self.send(method)
-				
+
 				# convert Structs to hash
 				if (result.is_a? Array)
 					result.map! do |item|
@@ -37,7 +37,7 @@ class ANN
 			# return hash
 			Hash[data]
 		end
-end
+	end
 
 # various ANN struct types
 ANN_Error   = Struct.new(:message)
@@ -50,8 +50,8 @@ class ANN_Anime < ANN
 	# ann_anime Nokogiri object
 	attr_writer :ann_anime
 
-	
-	# initialize and create info methods 
+
+	# initialize and create info methods
 	def initialize(ann_anime)
 		@ann_anime = ann_anime
 
@@ -68,7 +68,7 @@ class ANN_Anime < ANN
 
 		# create methods
 		@info.each do |name, key|
-			create_method(name) do 
+			create_method(name) do
 				info = find_info(key)
 				return nil if info.nil?
 				info.map do |i|
@@ -123,7 +123,7 @@ class ANN_Anime < ANN
 	def type
 		@type ||= @ann_anime['type']
 	end
-		
+
 	# @return [[ANN_Image]] returns array of ANN_Image
 	def images
 		@images ||= find_info("Picture").xpath("./img").map do |i|
@@ -156,11 +156,102 @@ class ANN_Anime < ANN
 			ANN_Cast.new(person['id'], role.content, person.content, s['lang'])
 		end
 	end
-	
+
 	# @return [Hash] hash of self
 	def to_h
 		# create hash excluding some methods
 		to_hash([:to_h, :ann_anime=, :find_info])
+	end
+end
+
+class	ANN_Manga < ANN
+	# ann_anime Nokogiri object
+	attr_writer :ann_manga
+
+	def initialize(ann_manga)
+		@ann_manga = ann_manga
+
+		# information available from detail
+		@info = Hash.new
+		@info[:title]         			= "Main title"
+		@info[:synopsis]      			= "Plot Summary"
+		@info[:genres]        			= "Genres"
+		@info[:vintage]       			= "Vintage"
+		@info[:themes]        			= "Themes"
+		@info[:number_of_tankoubon] = "Number of tankoubon"
+
+		# create methods
+		@info.each do |name, key|
+			create_method(name) do
+				info = find_info(key)
+				return nil if info.nil?
+				info.map do |i|
+					i.content
+				end
+			end
+		end
+	end
+
+	# @return [Nokogiri::XML::NodeSet] return all info with provided key
+	def find_info(key)
+		@ann_manga.search("info[@type=\"#{key}\"]")
+	end
+
+	# @return [String] returns manga id
+	def id
+		@id ||= @ann_manga['id']
+	end
+	##
+	# These methods are created via create_method in the constructor
+
+	# @return [[String]] returns title(s)
+	def title; end
+	# @return [[String]] returns synopsis
+	def synopsis; end
+	# @return [[String]] returns array of genres
+	def genres; end
+	# @return [[String]] returns array of themes
+	def themes; end
+	# @return [[String]] returns array of vintage(s)
+	def vintage; end
+	# @return [[Integer]] returns the number of tankoubon
+	def number_of_tankoubon; end
+
+	# @return [Hash] returns hash of titles grouped by language abbreviation
+	def alt_titles
+		titles = find_info("Alternative title").group_by {|title| title['lang']}
+		titles.each do |key, value|
+			value.map! do |title|
+				title.content
+			end
+		end
+	end
+
+	# @return [String] returns manga type
+	def type
+		@type ||= @ann_manga['type']
+	end
+
+	# @return [[ANN_Image]] returns array of ANN_Image
+	def images
+		@images ||= find_info("Picture").xpath("./img").map do |i|
+			ANN_Image.new(i['src'], i['width'], i['height'])
+		end
+	end
+
+	# @return [[ANN_Staff]] returns array of ANN_Staff
+	def staff
+		@staff ||= @ann_manga.xpath("./staff").map do |s|
+			task = s.at_xpath("task")
+			person = s.at_xpath("person")
+			ANN_Staff.new(person['id'], task.content, person.content)
+		end
+	end
+
+	# @return [Hash] hash of self
+	def to_h
+		# create hash excluding some methods
+		to_hash([:to_h, :ann_manga=, :find_info])
 	end
 end
 

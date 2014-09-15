@@ -10,13 +10,15 @@ require 'ann_wrapper/ann_objects'
 module ANN_Wrapper
 extend ANN_Wrapper
 
+	@@type = "anime"
+
 	# ANN API anime url
 	ANN_URL         = "http://cdn.animenewsnetwork.com/encyclopedia"
 	ANN_API_URL     = "#{ANN_URL}/api.xml"
 	ANN_REPORTS_URL = "#{ANN_URL}/reports.xml"
 
-	# fetch up to 50 anime in one request
-	def batch_anime(ids, api_url=ANN_API_URL)
+	# fetch up to 50 items(Animes or Mangas) in one request
+	def batch_items(ids, api_url=ANN_API_URL)
 		# append id to API url and send request
 		url = "#{api_url}?title=#{ids.first.to_s}"
 		ids[1..-1].each do |id|
@@ -27,25 +29,32 @@ extend ANN_Wrapper
 
 		return [ann] if ann.is_a?(ANN_Error)
 
-		all_anime = ann.xpath('//ann/anime')
+		all_items = ann.xpath("//ann/#{@@type}")
 		warnings = ann.xpath('//ann/warning')
 
-		return [ANN_Error.new(get_xml_error(ann))] if all_anime.empty? and warnings.empty?
+		return [ANN_Error.new(get_xml_error(ann))] if all_items.empty? and warnings.empty?
 
-		all_anime = all_anime.map { |anime| ANN_Anime.new(anime) }
+		all_items = all_items.map { |item| Object.const_get("ANN_#{@@type.capitalize}").new(item) }
 		warnings = warnings.map { |warning| ANN_Error.new(get_xml_error(warning)) }
-		
-		all_anime.push(*warnings)
+
+		all_items.push(*warnings)
 	end
 
 	# fetch anime and convert to ANN_Anime
-	def fetch_anime(id, api_url=ANN_API_URL)
-		batch_anime([id], api_url).first
+	def fetch_item(id, api_url=ANN_API_URL)
+		batch_items([id], api_url).first
 	end
 
 	# fetch list of titles via reports
-	def fetch_titles(type="anime", nskip=0, nlist=50, name="", api_url=ANN_REPORTS_URL)
-		url = "#{api_url}?id=155&type=#{type}&nskip=#{nskip}&nlist=#{nlist}"
+	def fetch_titles(options = {})
+		options[:type]    ||= "anime"
+		options[:nskip]   ||= 0
+		options[:nlist]   ||= 50
+		options[:name]    ||= ""
+		options[:api_url] ||= ANN_REPORTS_URL
+
+		url = "#{options[:api_url]}?id=155&type=#{options[:type]}&name=#{options[:name]}&nskip=#{options[:nskip]}&nlist=#{options[:nlist]}"
+
 		report = fetch(url)
 
 		return report if report.is_a?(ANN_Error)
@@ -56,6 +65,15 @@ extend ANN_Wrapper
 
 		reports.map { |item| ANN_Report.new(item) }
 	end
+
+  def method_missing(meth, *args, &block)
+    if meth.to_s =~ /^(fetch|batch)_(anime|manga)$/
+      @@type = $2
+      $1 == 'fetch' ? fetch_item(*args) : batch_items(*args)
+    else
+      super
+    end
+  end
 
 	private
 		# fetch data from ANN API via http GET request
@@ -70,7 +88,7 @@ extend ANN_Wrapper
 			rescue
 				ANN_Error.new("Could not reach valid URL")
 			end
-		end	
+		end
 
 		# attempt to grab error message from XMLObject
 		def get_xml_error(xobj)
