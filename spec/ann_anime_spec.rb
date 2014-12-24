@@ -1,38 +1,40 @@
+
 require 'spec_helper'
 
-shared_examples_for "an Array of" do |method, object, expected, index=0|
-	let(:result) {ANN_Wrapper.fetch_anime(11770).send(method.to_sym)}
-	it "#{object} objects" do
-		expect(result).to be_an_instance_of Array
-		expect(result.first).to be_an_instance_of object
-	end
-	it "containing the correct #{method}" do
-		expect(result[index]).to eql expected
-	end
-end
-
-shared_examples_for "a String" do |method, expected|
-	it "containing the correct #{method}" do
-		anime = ANN_Wrapper.fetch_anime 11770
-		result = anime.send(:"#{method}")
-		expect(result).to be_an_instance_of String
-		expect(result).to eql expected
-	end
-end
-
-shared_examples_for "a Hash of" do |method, object, key, expected|
-	let(:result) {ANN_Wrapper.fetch_anime(11770).send(method.to_sym)}
-	it "#{object}s" do
-		expect(result).to be_an_instance_of Hash
-		expect(result.first).to be_an_instance_of object
-	end
-	it "containing the correct #{method}" do
-		expect(result[key].first).to eql expected
-	end
-end
 
 
 describe ANN_Anime do
+
+	shared_examples_for "an Array of" do |method, object, expected, index=0|
+		let(:result) {ANN_Wrapper.fetch_anime(11770).send(method.to_sym)}
+		it "#{object} objects" do
+			expect(result).to be_an_instance_of Array
+			expect(result.first).to be_an_instance_of object
+		end
+		it "containing the correct #{method}" do
+			expect(result[index]).to eql expected
+		end
+	end
+
+	shared_examples_for "a String" do |method, expected|
+		it "containing the correct #{method}" do
+			anime = ANN_Wrapper.fetch_anime 11770
+			result = anime.send(:"#{method}")
+			expect(result).to be_an_instance_of String
+			expect(result).to eql expected
+		end
+	end
+
+	shared_examples_for "a Hash of" do |method, object, key, expected|
+		let(:result) {ANN_Wrapper.fetch_anime(11770).send(method.to_sym)}
+		it "#{object}s" do
+			expect(result).to be_an_instance_of Hash
+			expect(result.first).to be_an_instance_of object
+		end
+		it "containing the correct #{method}" do
+			expect(result[key].first).to eql expected
+		end
+	end
 
 	describe "#find_info" do
 		let(:anime) {ANN_Wrapper.fetch_anime(11770)}

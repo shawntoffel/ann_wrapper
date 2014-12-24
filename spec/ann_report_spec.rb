@@ -1,15 +1,18 @@
+# clear global definitions
+
 require 'spec_helper'
 
-shared_examples_for "a String" do |method, expected|
-	it "containing the correct #{method}" do
-		report = ANN_Wrapper.fetch_titles({type: "anime", nskip: 0, nlist: 5})[0]
-		result = report.send(:"#{method}")
-		expect(result).to be_an_instance_of String
-		expect(result).to eql expected
-	end
-end
 
 describe ANN_Report do
+	shared_examples_for "a String" do |method, expected|
+		it "containing the correct #{method}" do
+			report = ANN_Wrapper.fetch_titles({type: "anime", nskip: 0, nlist: 5})[0]
+			result = report.send(:"#{method}")
+			expect(result).to be_an_instance_of String
+			expect(result).to eql expected
+		end
+	end
+
 	describe "#id" do
 		it_returns "a String", :id, "15847"
 	end
