@@ -1,0 +1,47 @@
+<report skipped="0" listed="5">
+	<args>
+		<type>anime</type>
+		<name/>
+		<search/>
+	</args>
+	<item>
+		<id>15847</id>
+		<gid>1234701803</gid>
+		<type>TV</type>
+		<name>Nandaka Velonica</name>
+		<precision>TV</precision>
+		<vintage>2014-03-10 to 2014-03-21</vintage>
+	</item>
+	<item>
+		<id>15846</id>
+		<gid>4170451556</gid>
+		<type>TV</type>
+		<name>Love Stage!!</name>
+		<precision>TV</precision>
+		<vintage>2014</vintage>
+	</item>
+	<item>
+		<id>15843</id>
+		<gid>2655972442</gid>
+		<type>TV</type>
+		<name>Fate/stay night</name>
+		<precision>TV 2/2014</precision>
+		<vintage>2014-10</vintage>
+	</item>
+	<item>
+		<id>15842</id>
+		<gid>2477560632</gid>
+		<type>TV</type>
+		<name>Atelier Escha & Logy: Alchemists of the Dusk Sky</name>
+		<precision>TV</precision>
+		<vintage>2014-04</vintage>
+	</item>
+	<item>
+		<id>15841</id>
+		<gid>3261136697</gid>
+		<type>ONA</type>
+		<name>Wonder Momo</name>
+		<precision>ONA</precision>
+		<vintage>2014-02</vintage>
+	</item>
+</report>
