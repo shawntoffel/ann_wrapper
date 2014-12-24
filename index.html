@@ -1,49 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="ann_wrapper : A ruby wrapper/abstraction for the Anime News Network API" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>ann_wrapper by Getkura</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>ann_wrapper</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>ann_wrapper</h1>
+        <p>A ruby wrapper/abstraction for the Anime News Network API</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Getkura/ann_wrapper">View on GitHub</a>
+        <p class="view"><a href="https://github.com/Getkura/ann_wrapper">View the Project on GitHub <small>Getkura/ann_wrapper</small></a></p>
 
-          <h1 id="project_title">ann_wrapper</h1>
-          <h2 id="project_tagline">A ruby wrapper/abstraction for the Anime News Network API</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Getkura/ann_wrapper/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Getkura/ann_wrapper/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+        <ul>
+          <li><a href="https://github.com/Getkura/ann_wrapper/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Getkura/ann_wrapper/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Getkura/ann_wrapper">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
         <h1>
-<a name="ann_wrapper" class="anchor" href="#ann_wrapper"><span class="octicon octicon-link"></span></a>ann_wrapper</h1>
+<a id="ann_wrapper" class="anchor" href="#ann_wrapper" aria-hidden="true"><span class="octicon octicon-link"></span></a>ann_wrapper</h1>
 
 <p><a href="http://badge.fury.io/rb/ann_wrapper"><img src="https://badge.fury.io/rb/ann_wrapper.png" alt="Gem Version"></a>
 <a href="https://travis-ci.org/Getkura/ann_wrapper"><img src="https://travis-ci.org/Getkura/ann_wrapper.png?branch=dev" alt="Build Status"></a>
 <a href="https://gemnasium.com/Getkura/ann_wrapper"><img src="https://gemnasium.com/Getkura/ann_wrapper.png" alt="Dependency Status"></a>
-<a href="https://codeclimate.com/github/Getkura/ann_wrapper"><img src="https://codeclimate.com/github/Getkura/ann_wrapper.png" alt="Code Climate"></a>
+<a href="https://codeclimate.com/github/Getkura/ann_wrapper"><img src="https://codeclimate.com/github/Getkura/ann_wrapper/badges/gpa.svg" alt="Code Climate"></a>
 <a href="https://coveralls.io/r/Getkura/ann_wrapper?branch=dev"><img src="https://coveralls.io/repos/Getkura/ann_wrapper/badge.png?branch=dev" alt="Coverage Status"></a></p>
 
 <p>A simple ruby wrapper/abstraction for the <a href="http://www.animenewsnetwork.com/encyclopedia/api.php">Anime News Network API</a></p>
 
 <h2>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
 <p>Add this line to your application's Gemfile:</p>
 
@@ -61,14 +58,39 @@
 </code></pre>
 
 <h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>Fetch an anime:</p>
+<h3>
+<a id="fetch-an-anime" class="anchor" href="#fetch-an-anime" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fetch an anime:</h3>
+
+<pre><code>anime = ANN_Wrapper.fetch_anime "id"
+anime.title
+anime.alt_titles
+anime.synopsis
+anime.num_episodes
+anime.genres
+anime.themes
+anime.vintage
+anime.op_theme
+anime.ed_theme
+anime.id
+anime.type
+anime.ratings
+anime.episodes
+anime.staff
+anime.cast
+anime.images
+anime.to_h
+</code></pre>
+
+<h4>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example:</h4>
 
 <pre><code>steins_gate = ANN_Wrapper.fetch_anime 11770
 </code></pre>
 
-<p>Info:</p>
+<h5>
+<a id="info" class="anchor" href="#info" aria-hidden="true"><span class="octicon octicon-link"></span></a>Info:</h5>
 
 <pre><code>steins_gate.id
  =&gt; "11770"
@@ -101,24 +123,26 @@ steins_gate.ed_theme
  =&gt; ["\"Tokitsukasadoru Jūni no Meiyaku\" (刻司ル十二ノ盟約) by Yui Sakakibara", "#2: \"Sukai Kuraddo no Kansokusha\" (スカイクラッドの観測者) by Kanako Ito (ep 23)", "#3: \"Another Heaven\" by Kanako Itou (ep 24)"]
 </code></pre>
 
-<p>Cast and Staff:</p>
+<h5>
+<a id="cast-and-staff" class="anchor" href="#cast-and-staff" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cast and Staff:</h5>
 
 <pre><code>steins_gate.cast.find_all {|c| c.name.include? "Hanazawa"}
  =&gt; [#&lt;struct ANN_Cast id="53741", role="Mayuri Shiina", name="Kana Hanazawa", lang="JA"&gt;]
 
 steins_gate.staff.find_all {|s| s.task.eql? "Director"}
  =&gt; [
-        #&lt;struct ANN_Staff id="593", task="Director", name="Takuya Satō"&gt;, 
-        #&lt;struct ANN_Staff id="9693", task="Director", name="Hiroshi Hamasaki"&gt;, 
+        #&lt;struct ANN_Staff id="593", task="Director", name="Takuya Satō"&gt;,
+        #&lt;struct ANN_Staff id="9693", task="Director", name="Hiroshi Hamasaki"&gt;,
         #&lt;struct ANN_Staff id="35713", task="Director", name="Tomoki Kobayashi"&gt;
     ]
 </code></pre>
 
-<p>Episodes:</p>
+<h5>
+<a id="episodes" class="anchor" href="#episodes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Episodes:</h5>
 
 <pre><code>steins_gate.episodes.find_all {|e| e.title.include? "Prologue"}
  =&gt; [
-        #&lt;struct ANN_Episode number="1", title="Prologue of the Beginning and End", lang="EN"&gt;, 
+        #&lt;struct ANN_Episode number="1", title="Prologue of the Beginning and End", lang="EN"&gt;,
         #&lt;struct ANN_Episode number="24", title="The Prologue Begins With the End", lang="EN"&gt;
     ]
 
@@ -126,20 +150,62 @@ steins_gate.episodes.first.to_h
  =&gt; {:number=&gt;"1", :title=&gt;"Prologue of the Beginning and End", :lang=&gt;"EN"}
 </code></pre>
 
-<p>Images:</p>
+<h5>
+<a id="images" class="anchor" href="#images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Images:</h5>
 
 <pre><code>steins_gate.images
  =&gt; [
-        #&lt;struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-1864351140.1370764886.jpg", width="200", height="125"&gt;, 
-        #&lt;struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/max500x600/encyc/A11770-1864351140.1370764886.jpg", width="500", height="312"&gt;, 
-        #&lt;struct ANN_Image src="http://cdn.animenewsnetwork.com/images/encyc/A11770-1864351140.1370764886.jpg", width="900", height="562"&gt;, 
-        #&lt;struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-8.jpg", width="200", height="200"&gt;, 
+        #&lt;struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-1864351140.1370764886.jpg", width="200", height="125"&gt;,
+        #&lt;struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/max500x600/encyc/A11770-1864351140.1370764886.jpg", width="500", height="312"&gt;,
+        #&lt;struct ANN_Image src="http://cdn.animenewsnetwork.com/images/encyc/A11770-1864351140.1370764886.jpg", width="900", height="562"&gt;,
+        #&lt;struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-8.jpg", width="200", height="200"&gt;,
         #&lt;struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/max500x600/encyc/A11770-8.jpg", width="317", height="317"&gt;
     ]
 </code></pre>
 
+<h5>
+<a id="ratings" class="anchor" href="#ratings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ratings:</h5>
+
+<pre><code>steings_gate.ratings
+ =&gt; [
+        #&lt;struct ANN_Rating votes="3788", weighted="9.1129", bayesian_score="9.1075"&gt;
+    ]
+</code></pre>
+
+<h3>
+<a id="fetch-a-manga" class="anchor" href="#fetch-a-manga" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fetch a manga:</h3>
+
+<p>Fetching a manga works exactly the same as an anime, but you should call the <code>fetch_manga</code> method.</p>
+
+<pre><code>manga = ANN_Wrapper.fetch_manga "id"
+manga.title
+manga.alt_titles
+manga.synopsis
+manga.genres
+manga.vintage
+manga.themes
+manga.num_tankoubon
+manga.num_pages
+manga.id
+manga.type
+manga.staff
+manga.ratings
+manga.images
+manga.to_h
+</code></pre>
+
+<h3>
+<a id="batching" class="anchor" href="#batching" aria-hidden="true"><span class="octicon octicon-link"></span></a>Batching:</h3>
+
+<p>Send any number of ids in an array for a batch request.
+This will return an array of ANN_Anime or ANN_Manga objects.</p>
+
+<pre><code>anime = ANN_Wrapper.batch_anime(["id_1", "id_2", "id_3", ...])
+manga = ANN_Wrapper.batch_manga(["id_1", "id_2", "id_3", ...])
+</code></pre>
+
 <h2>
-<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
 
 <ol>
 <li>Fork it</li>
@@ -149,16 +215,12 @@ steins_gate.episodes.first.to_h
 <li>Create new Pull Request</li>
 </ol>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">ann_wrapper maintained by <a href="https://github.com/Getkura">Getkura</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Getkura">Getkura</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-
+    <script src="javascripts/scale.fix.js"></script>
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -169,7 +231,6 @@ steins_gate.episodes.first.to_h
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
 
   </body>
 </html>
