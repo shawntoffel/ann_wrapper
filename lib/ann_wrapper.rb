@@ -4,7 +4,9 @@
 
 require "net/http"
 require "nokogiri"
-require 'ann_wrapper/ann_objects'
+require 'ann_wrapper/ann_anime'
+require 'ann_wrapper/ann_manga'
+require 'ann_wrapper/ann_report'
 
 # wrapper class for ANN API
 module ANN_Wrapper
