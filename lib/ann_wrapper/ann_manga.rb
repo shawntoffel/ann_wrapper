@@ -14,7 +14,8 @@ class	ANN_Manga < ANN_Media
 		@info[:genres]        			= "Genres"
 		@info[:vintage]       			= "Vintage"
 		@info[:themes]        			= "Themes"
-		@info[:number_of_tankoubon] = "Number of tankoubon"
+		@info[:num_tankoubon] = "Number of tankoubon"
+		@info[:num_pages]						= "Number of pages"
 
 		# create methods
 		create_methods(@ann_manga, @info)
@@ -40,6 +41,11 @@ class	ANN_Manga < ANN_Media
 		super @ann_manga
 	end
 
+	# @return [[ANN_Rating]] returns array of ANN_Episode
+	def ratings
+		super @ann_manga
+	end
+
 	# @return [Hash] hash of self
 	def to_h
 		# create hash excluding some methods
@@ -49,6 +55,9 @@ class	ANN_Manga < ANN_Media
 	##
 	# These methods are created via create_method in the constructor
 
-	# @return [[Integer]] returns the number of tankoubon
-	def number_of_tankoubon; end
+	# @return [[String]] returns the number of tankoubon
+	def num_tankoubon; end
+
+	# @return [[String]] returns the number of tankoubon
+	def num_pages; end
 end

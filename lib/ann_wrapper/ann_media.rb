@@ -57,4 +57,11 @@ class ANN_Media < ANN
 			end
 		end
 	end
+
+	# @return [[ANN_Rating]] returns array of ANN_Episode
+	def ratings(obj)
+		@ratings ||= obj.xpath("./ratings").map do |r|
+			ANN_Rating.new(r['nb_votes'], r['weighted_score'], r['bayesian_score'])
+		end
+	end
 end

@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'spec_helper'
 
 describe ANN_Manga do
@@ -51,7 +52,7 @@ describe ANN_Manga do
   end
 
   describe "#alt_titles" do
-    it_returns "a Hash of", :alt_titles, Array, "PT", "Tokyo Ghoul"
+    it_returns "a Hash of", :alt_titles, Array, "JA", "東京喰種トーキョーグール"
   end
 
   describe "#synopsis" do
@@ -60,11 +61,19 @@ describe ANN_Manga do
   end
 
   describe "#vintage" do
-    it_returns "an Array of", :vintage, String, "2011-09-08 (serialized in Weekly Young Jump)"
+    it_returns "an Array of", :vintage, String, "2011-09-08 to 2014-09-18 (serialized in Weekly Young Jump)"
   end
 
-  describe "#number_of_tankoubon" do
-    it_returns "an Array of", :number_of_tankoubon, String, "9"
+	describe "#ratings" do
+		it_returns "an Array of", :ratings, ANN_Rating, ANN_Rating.new("32", "8.5385", "8.4562")
+	end
+
+  describe "#num_tankoubon" do
+    it_returns "an Array of", :num_tankoubon, String, "9"
+  end
+
+  describe "#num_pages" do
+    it_returns "an Array of", :num_pages, String, "202"
   end
 
   describe "#genres" do
@@ -76,7 +85,7 @@ describe ANN_Manga do
   end
 
   describe "#staff" do
-    it_returns "an Array of", :staff, ANN_Staff, ANN_Staff.new("123563", "Story and Art", "Sui Ishida")
+    it_returns "an Array of", :staff, ANN_Staff, ANN_Staff.new("123563", "Story & Art", "Sui Ishida")
   end
 
   describe "#images" do
@@ -92,7 +101,7 @@ describe ANN_Manga do
     end
     it "correctly converts structs to hash" do
       manga_hash = manga.to_h
-      staff_hash = ANN_Staff.new("123563", "Story and Art", "Sui Ishida").hash
+      staff_hash = ANN_Staff.new("123563", "Story & Art", "Sui Ishida").hash
       expect(manga_hash[:staff][0]).to eql staff_hash
     end
   end
