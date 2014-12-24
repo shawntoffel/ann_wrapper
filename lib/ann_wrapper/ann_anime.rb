@@ -40,6 +40,12 @@ class ANN_Anime < ANN_Media
 		@type ||= @ann_anime['type']
 	end
 
+	def ratings
+		@ratings ||= @ann_anime.xpath("./ratings").map do |r|
+			ANN_Rating.new(r['nb_votes'], r['weighted_score'], r['bayesian_score'])
+		end
+	end
+
 	# @return [[ANN_Episode]] returns array of ANN_Episode
 	def episodes
 		@episodes ||= @ann_anime.xpath("./episode").map do |e|

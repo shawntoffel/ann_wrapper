@@ -58,8 +58,7 @@ describe ANN_Anime do
 	end
 
 	describe "#synopsis" do
-		it_returns "an Array of", :synopsis, String, "Rintaro Okabe is a self-proclaimed \"mad scientist\" who believes that an international scientific organization named SERN is conspiring to reshape the world according to its own interests. He and his friend Itaru Hashida inadvertently create a gadget able to send messages to the past. The discovery and experimentation of this instrument become the catalyst of fundamental alterations to the present. Okabe is the only one aware of these changes because he possesses a Reading Steiner, the ability to retain the memories from previous experienced timelines. Oblivious of the consequences of their actions, Rintaro and his friends end up creating modifications of grievous proportions. He must then try to find a way to return as close as possible to the original timeline in order to save his precious lab partners."
-
+		it_returns "an Array of", :synopsis, String, "Rintaro Okabe is a self-proclaimed \"mad scientist\" who believes that an international organization is conspiring to reshape the world according to its own interests. He and his friend Itaru Hashida inadvertently create a gadget able to send messages to the past. The discovery and experimentation of this instrument become the catalyst of fundamental alterations to the present. Oblivious of the consequences of their actions, Rintaro and his friends end up creating modifications of grievous proportions. He must then try to find a way to return as close as possible to the original timeline in order to save his precious lab members."
 	end
 
 	describe "#num_episodes" do
@@ -86,8 +85,16 @@ describe ANN_Anime do
 		it_returns "an Array of", :ed_theme, String, "#3: \"Another Heaven\" by Kanako Itou (ep 24)", 2
 	end
 
+	describe "#ratings" do
+		it_returns "an Array of", :ratings, ANN_Rating, ANN_Rating.new("3788", "9.1129", "9.1075")
+	end
+
+	describe "#episodes" do
+		it_returns "an Array of", :episodes, ANN_Episode, ANN_Episode.new("1", "Prologue of the Beginning and End", "EN")
+	end
+
 	describe "#cast" do
-		it_returns "an Array of", :cast, ANN_Cast, ANN_Cast.new("1386", "Yugo \"Braun\" Tennoji", "Christopher R. Sabat", "EN")
+		it_returns "an Array of", :cast, ANN_Cast, ANN_Cast.new("110469", "Rintarō Okabe", "Peter Lehn", "DE")
 	end
 
 	describe "#staff" do
@@ -95,7 +102,7 @@ describe ANN_Anime do
 	end
 
 	describe "#images" do
-		it_returns "an Array of", :images, ANN_Image, ANN_Image.new("http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-1864351140.1370764886.jpg", "200", "125")
+		it_returns "an Array of", :images, ANN_Image, ANN_Image.new("http://cdn.animenewsnetwork.com/thumbnails/hotlink-fit200x200/encyc/A11770-1864351140.1370764886.jpg", "200", "125")
 	end
 
 	describe "#to_h" do
