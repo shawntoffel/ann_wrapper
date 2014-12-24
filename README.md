@@ -27,9 +27,30 @@ Or install it yourself as:
 
 ###Fetch an anime:
 
+    anime = ANN_Wrapper.fetch_anime "id"
+    anime.title
+    anime.alt_titles
+    anime.synopsis
+    anime.num_episodes
+    anime.genres
+    anime.themes
+    anime.vintage
+    anime.op_theme
+    anime.ed_theme
+    anime.id
+    anime.type
+    anime.ratings
+    anime.episodes
+    anime.staff
+    anime.cast
+    anime.images
+    anime.to_h
+    
+####Example:
+
     steins_gate = ANN_Wrapper.fetch_anime 11770
 
-####Info:
+#####Info:
 
     steins_gate.id
      => "11770"
@@ -62,7 +83,7 @@ Or install it yourself as:
      => ["\"Tokitsukasadoru Jūni no Meiyaku\" (刻司ル十二ノ盟約) by Yui Sakakibara", "#2: \"Sukai Kuraddo no Kansokusha\" (スカイクラッドの観測者) by Kanako Ito (ep 23)", "#3: \"Another Heaven\" by Kanako Itou (ep 24)"]
 
 
-####Cast and Staff:
+#####Cast and Staff:
 
     steins_gate.cast.find_all {|c| c.name.include? "Hanazawa"}
      => [#<struct ANN_Cast id="53741", role="Mayuri Shiina", name="Kana Hanazawa", lang="JA">]
@@ -75,7 +96,7 @@ Or install it yourself as:
         ]
 
 
-####Episodes:
+#####Episodes:
 
     steins_gate.episodes.find_all {|e| e.title.include? "Prologue"}
      => [
@@ -86,7 +107,7 @@ Or install it yourself as:
     steins_gate.episodes.first.to_h
      => {:number=>"1", :title=>"Prologue of the Beginning and End", :lang=>"EN"}
 
-####Images:
+#####Images:
 
     steins_gate.images
      => [
@@ -96,12 +117,40 @@ Or install it yourself as:
             #<struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-8.jpg", width="200", height="200">,
             #<struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/max500x600/encyc/A11770-8.jpg", width="317", height="317">
         ]
+        
+#####Ratings:
 
+    steings_gate.ratings
+     => [
+            #<struct ANN_Rating votes="3788", weighted="9.1129", bayesian_score="9.1075">
+        ]
+        
 ###Fetch a manga:
 
-Fetching manga works exactly the same as anime, but you should call the `fetch_manga` method.
+Fetching a manga works exactly the same as an anime, but you should call the `fetch_manga` method.
 
+    manga = ANN_Wrapper.fetch_manga "id"
+    manga.title
+    manga.alt_titles
+    manga.synopsis
+    manga.genres
+    manga.vintage
+    manga.themes
+    manga.num_tankoubon
+    manga.num_pages
+    manga.id
+    manga.type
+    manga.staff
+    manga.ratings
+    manga.images
+    manga.to_h
 
+###Batching:
+Send any number of ids in an array for a batch request.
+This will return an array of ANN_Anime or ANN_Manga objects.
+
+    anime = ANN_Wrapper.batch_anime(["id_1", "id_2", "id_3", ...])
+    manga = ANN_Wrapper.batch_manga(["id_1", "id_2", "id_3", ...])
 
 ## Contributing
 
