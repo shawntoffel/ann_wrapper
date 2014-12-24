@@ -4,8 +4,7 @@
 [![Gem Version](https://badge.fury.io/rb/ann_wrapper.png)](http://badge.fury.io/rb/ann_wrapper)
 [![Build Status](https://travis-ci.org/Getkura/ann_wrapper.png?branch=dev)](https://travis-ci.org/Getkura/ann_wrapper)
 [![Dependency Status](https://gemnasium.com/Getkura/ann_wrapper.png)](https://gemnasium.com/Getkura/ann_wrapper)
-[![Code Climate](https://codeclimate.com/github/Getkura/ann_wrapper.png)](https://codeclimate.com/github/Getkura/ann_wrapper)
-[![Coverage Status](https://coveralls.io/repos/Getkura/ann_wrapper/badge.png?branch=dev)](https://coveralls.io/r/Getkura/ann_wrapper?branch=dev)
+[![Coverage Status](https://coveralls.io/repos/Getkura/ann_wrapper/badge.png?branch=master)](https://coveralls.io/r/Getkura/ann_wrapper?branch=master)
 
 
 A simple ruby wrapper/abstraction for the [Anime News Network API](http://www.animenewsnetwork.com/encyclopedia/api.php)
@@ -98,9 +97,9 @@ Or install it yourself as:
             #<struct ANN_Image src="http://cdn.animenewsnetwork.com/thumbnails/max500x600/encyc/A11770-8.jpg", width="317", height="317">
         ]
 
-###Fetch an manga:
+###Fetch a manga:
 
-Fetching mangas works exactly the same as the animes, but you should call the `fetch_manga` method.
+Fetching manga works exactly the same as anime, but you should call the `fetch_manga` method.
 
 
 
