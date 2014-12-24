@@ -40,16 +40,6 @@ class	ANN_Manga < ANN_Media
 		super @ann_manga
 	end
 
-	# @return [Hash] returns hash of titles grouped by language abbreviation
-	def alt_titles
-		titles = find_info("Alternative title").group_by {|title| title['lang']}
-		titles.each do |key, value|
-			value.map! do |title|
-				title.content
-			end
-		end
-	end
-
 	# @return [Hash] hash of self
 	def to_h
 		# create hash excluding some methods
