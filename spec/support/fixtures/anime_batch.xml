@@ -1,8 +1,11 @@
-<ann><anime id="11770" gid="3907583141" type="TV" name="Steins;Gate" precision="TV" generated-on="2014-02-16T11:28:28Z">
-<info gid="1864351140" type="Picture" src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-1864351140.1370764886.jpg" width="200" height="125"><img src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-1864351140.1370764886.jpg" width="200" height="125"/><img src="http://cdn.animenewsnetwork.com/thumbnails/max500x600/encyc/A11770-1864351140.1370764886.jpg" width="500" height="312"/><img src="http://cdn.animenewsnetwork.com/images/encyc/A11770-1864351140.1370764886.jpg" width="900" height="562"/></info>
-<info gid="2893564300" type="Picture" src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-8.jpg" width="200" height="200"><img src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-8.jpg" width="200" height="200"/><img src="http://cdn.animenewsnetwork.com/thumbnails/max500x600/encyc/A11770-8.jpg" width="317" height="317"/></info>
+
+<ann><anime id="11770" gid="3907583141" type="TV" name="Steins;Gate" precision="TV" generated-on="2014-12-24T09:02:08Z">
+<info gid="1864351140" type="Picture" src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-1864351140.1370764886.jpg" width="200" height="125"><img src="http://cdn.animenewsnetwork.com/thumbnails/hotlink-fit200x200/encyc/A11770-1864351140.1370764886.jpg" width="200" height="125"/><img src="http://cdn.animenewsnetwork.com/thumbnails/hotlink-max500x600/encyc/A11770-1864351140.1370764886.jpg" width="500" height="312"/><img src="http://cdn.animenewsnetwork.com/thumbnails/hotlink-full/encyc/A11770-1864351140.1370764886.jpg" width="900" height="562"/></info>
+<info gid="2893564300" type="Picture" src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A11770-8.jpg" width="200" height="200"><img src="http://cdn.animenewsnetwork.com/thumbnails/hotlink-fit200x200/encyc/A11770-8.jpg" width="200" height="200"/><img src="http://cdn.animenewsnetwork.com/thumbnails/hotlink-max500x600/encyc/A11770-8.jpg" width="317" height="317"/></info>
 <info gid="1370260427" type="Main title" lang="JA">Steins;Gate</info>
 <info gid="2774671084" type="Alternative title" lang="PT">Steins-Gate e a Teoria do Caos</info>
+<info gid="2051310872" type="Alternative title" lang="RU">Врата Штейна</info>
+<info gid="990136510" type="Alternative title" lang="AR">ستاينز؛غيت</info>
 <info gid="2578893998" type="Alternative title" lang="JA">シュタインズ・ゲート</info>
 <info gid="1665915370" type="Alternative title" lang="ZH-TW">命運石之門</info>
 <info gid="1694538789" type="Alternative title" lang="KO">슈타인즈 게이트</info>
@@ -18,7 +21,9 @@
 <info gid="470020657" type="Themes">conspiracy</info>
 <info gid="2931273993" type="Themes">technology</info>
 <info gid="3676887126" type="Themes">Time travel</info>
+<info gid="1283244007" type="Themes">tragedy</info>
 <info gid="2673674224" type="Objectionable content">TA</info>
+<info gid="2376613060" type="Plot Summary">Rintaro Okabe is a self-proclaimed &quot;mad scientist&quot; who believes that an international organization is conspiring to reshape the world according to its own interests. He and his friend Itaru Hashida inadvertently create a gadget able to send messages to the past. The discovery and experimentation of this instrument become the catalyst of fundamental alterations to the present. Oblivious of the consequences of their actions, Rintaro and his friends end up creating modifications of grievous proportions. He must then try to find a way to return as close as possible to the original timeline in order to save his precious lab members.</info>
 <info gid="1679735241" type="Plot Summary">Rintaro Okabe is a self-proclaimed &quot;mad scientist&quot; who believes that an international scientific organization named SERN is conspiring to reshape the world according to its own interests. He and his friend Itaru Hashida inadvertently create a gadget able to send messages to the past. The discovery and experimentation of this instrument become the catalyst of fundamental alterations to the present. Okabe is the only one aware of these changes because he possesses a Reading Steiner, the ability to retain the memories from previous experienced timelines. Oblivious of the consequences of their actions, Rintaro and his friends end up creating modifications of grievous proportions. He must then try to find a way to return as close as possible to the original timeline in order to save his precious lab partners.</info>
 <info gid="1746069252" type="Running time">half hour</info>
 <info gid="2268120855" type="Number of episodes">24</info>
@@ -32,6 +37,7 @@
 <info gid="3815310299" type="Insert song">&quot;Watashi ☆LOVE na☆ Otome!&quot; (ワタシ☆LOVEな☆オトメ!) by Afilia Saga East (eps 2,9)</info>
 <info gid="1555341449" type="Official website" lang="JA" href="http://steinsgate.jp/">想定科学ADV『STEINS;GATE(シュタインズゲート)』公式Webサイト</info>
 <info gid="2038747414" type="Official website" lang="JA" href="http://steinsgate.tv/">TVアニメ「STEINS;GATE」公式サイト</info>
+<ratings nb_votes="3788" weighted_score="9.1129" bayesian_score="9.1075"/>
 <episode num="1">
 <title gid="3773691252" lang="EN">Prologue of the Beginning and End</title></episode>
 <episode num="2">
@@ -87,11 +93,13 @@
 <review href="http://www.animenewsnetwork.com/review/steins-gate/episodes-1">Steins;Gate Episodes 1-24 Streaming</review>
 <release date="2013-07-15" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=24296">Steins;Gate - Part 1 (Blu-Ray)</release>
 <release date="2013-09-30" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=24299">Steins;Gate - Part 2 (Blu-Ray)</release>
+<release date="2014-09-30" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=26659">Steins;Gate - Complete Series [Anime Classics] (BD+DVD)</release>
 <release date="2012-09-25" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=24847">Steins;Gate - Complete Series Part One (BD+DVD 1)</release>
 <release date="2012-09-25" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=21325">Steins;Gate - Complete Series Part One [Limited Edition] (BD+DVD 1)</release>
 <release date="2012-12-18" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=22023">Steins;Gate - Complete Series Part Two (BD+DVD 2)</release>
 <release date="2013-07-15" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=24297">Steins;Gate - Part 1 (DVD)</release>
 <release date="2013-09-30" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=24298">Steins;Gate - Part 2 (DVD)</release>
+<news datetime="2010-07-25T05:29:47Z" href="http://www.animenewsnetwork.com/news/2010-07-25/steins-gate-game-gets-tv-anime">&lt;cite&gt;Steins;Gate&lt;/cite&gt; Game Gets TV Anime</news>
 <news datetime="2011-03-11T11:33:53Z" href="http://www.animenewsnetwork.com/news/2011-03-11/anime/manga/game-events-cancelled-after-march-11-quake">Anime/Manga/Game Events Cancelled After March 11 Quake</news>
 <news datetime="2011-04-04T16:34:32Z" href="http://www.animenewsnetwork.com/news/2011-04-04/crunchyroll-to-simulcast-steins-gate-tv-anime">Crunchyroll to Simulcast &lt;cite&gt;Steins;Gate&lt;/cite&gt; TV Anime</news>
 <news datetime="2011-04-08T13:27:02Z" href="http://www.animenewsnetwork.com/news/2011-04-08/anime-on-demand-announces-next-three-simulcasts">Anime on Demand Announces Next Three Simulcasts</news>
@@ -140,10 +148,22 @@
 <news datetime="2013-08-13T03:19:19Z" href="http://www.animenewsnetwork.com/news/2013-08-12/rozen-maiden-game-slated-for-november">&lt;cite&gt;Rozen Maiden&lt;/cite&gt; Game Slated for November</news>
 <news datetime="2013-10-07T01:00:00Z" href="http://www.animenewsnetwork.com/news/2013-10-06/mamoru-miyano-to-sing-2nd-wooser-hand-to-mouth-life-season-theme">Mamoru Miyano to Sing 2nd &lt;cite&gt;Wooser's Hand-to-Mouth Life&lt;/cite&gt; Season's Theme</news>
 <news datetime="2013-10-05T14:42:07Z" href="http://www.animenewsnetwork.com/news/2013-10-05/leeds-anime-day-line-up-confimed">Leeds Anime Day Line Up Confimed</news>
+<news datetime="2013-10-17T04:30:00Z" href="http://www.animenewsnetwork.com/news/2013-10-17/steins-gate-stage-play-presented-in-digest-video">&lt;cite&gt;Steins;Gate&lt;/cite&gt; Stage Play Presented in Digest Video</news>
+<news datetime="2013-10-18T05:40:00Z" href="http://www.animenewsnetwork.com/news/2013-10-18/steins-gate-white-fox-makes-anime-short-for-space-satellite">&lt;cite&gt;Steins;Gate's&lt;/cite&gt; White Fox Makes Anime Short for Space Satellite</news>
 <news datetime="2013-11-07T10:09:49Z" href="http://www.animenewsnetwork.com/news/2013-11-07/leeds-anime-day-november-17">Leeds Anime Day November 17</news>
 <news datetime="2013-11-19T11:55:32Z" href="http://www.animenewsnetwork.com/news/2013-11-19/steins-gate-film-2nd-dvd/bd-promo-tv-ad-streamed">&lt;cite&gt;Steins;Gate&lt;/cite&gt; Film's 2nd DVD/BD Promo, TV Ad Streamed</news>
 <news datetime="2014-01-15T04:52:08Z" href="http://www.animenewsnetwork.com/news/2014-01-14/jast-usa-delays-steins-gate-pc-game-until-march-31">JAST USA Delays &lt;i&gt;Steins;Gate&lt;/i&gt; PC Game Until March 31</news>
 <news datetime="2014-02-14T10:50:00Z" href="http://www.animenewsnetwork.com/news/2014-02-14/blade-and-soul-fantasy-tv-anime-1st-promo-streamed">&lt;cite&gt;Blade &amp; Soul&lt;/cite&gt; Fantasy TV Anime's 1st Promo Streamed</news>
+<news datetime="2014-02-22T04:55:05Z" href="http://www.animenewsnetwork.com/news/2014-02-21/steins-gate-spinoff-linked-to-tv-anime-song-announcement">&lt;cite&gt;Steins;Gate&lt;/cite&gt; Spinoff Linked to TV Anime Song Announcement</news>
+<news datetime="2014-04-21T03:00:00Z" href="http://www.animenewsnetwork.com/news/2014-04-20/steins-gate/mugen-enten-no-arc-light-drama-cd-gets-manga">&lt;cite&gt;Steins;Gate: Mugen Enten no Arc Light&lt;/cite&gt; Drama CD Gets Manga</news>
+<news datetime="2014-06-20T14:45:00Z" href="http://www.animenewsnetwork.com:/news/2014-06-21/new-steins-gate-novel-tells-what-happens-6-years-after-game/.75771">New &lt;cite&gt;Steins;Gate&lt;/cite&gt; Novel Tells What Happens 6 Years After Game</news>
+<news datetime="2014-06-30T00:06:44Z" href="http://www.animenewsnetwork.com:/news/2014-06-30/one-piece-strong-world-and-we-without-wings-released-monday/.76116">&lt;i&gt;One Piece: Strong World&lt;/i&gt; and &lt;i&gt;We Without Wings&lt;/i&gt; Released Monday</news>
+<news datetime="2014-08-04T08:00:00Z" href="http://www.animenewsnetwork.com:/news/2014-08-04/free-anime-in-australia-3-aug-10-aug/.77279">Free Anime in Australia: 3/Aug - 10/Aug</news>
+<news datetime="2014-08-11T08:00:00Z" href="http://www.animenewsnetwork.com:/news/2014-08-11/free-anime-in-australia-11-aug-17-aug/.77517">Free Anime in Australia: 11/Aug - 17/Aug</news>
+<news datetime="2014-09-30T22:00:00Z" href="http://www.animenewsnetwork.com:/news/2014-09-30/north-american-anime-manga-releases-september-28-october-4/.79362">North American Anime, Manga Releases, September 28-October 4</news>
+<news datetime="2014-10-15T10:58:27Z" href="http://www.animenewsnetwork.com:/news/2014-10-15/new-steins-gate-anime-shorts-promote-ibm-next-generation-computing/.79939">New &lt;cite&gt;Steins;Gate&lt;/cite&gt; Anime Shorts Promote IBM's Next-Generation Computing</news>
+<news datetime="2014-10-18T03:00:00Z" href="http://www.animenewsnetwork.com:/news/2014-10-17/1st-steins-gate-ibm-short-streamed-with-english-subtitles/.80065">1st &lt;cite&gt;Steins;Gate&lt;/cite&gt; IBM Short Streamed with English Subtitles</news>
+<news datetime="2014-12-22T18:20:00Z" href="http://www.animenewsnetwork.com:/news/2014-12-22/steins-gate-the-committee-of-antimatter-novel-cancelled/.82516">&lt;cite&gt;Steins;Gate -The Committee of Antimatter-&lt;/cite&gt; Novel Cancelled</news>
 <staff gid="1755272986"><task>Director</task><person id="593">Takuya Satō</person></staff>
 <staff gid="1176923263"><task>Director</task><person id="9693">Hiroshi Hamasaki</person></staff>
 <staff gid="760045321"><task>Director</task><person id="35713">Tomoki Kobayashi</person></staff>
@@ -209,6 +229,7 @@
 <staff gid="2438292488"><task>Producer</task><person id="51941">Takayuki Matsunaga</person></staff>
 <staff gid="3552431102"><task>Producer</task><person id="77911">Kenjirou Gomi</person></staff>
 <staff gid="2172519109"><task>Producer</task><person id="98396">Yoshinao Doi</person></staff>
+<cast gid="3723438079" lang="DE"><role>Rintarō Okabe</role><person id="110469">Peter Lehn</person></cast>
 <cast gid="2966385551" lang="EN"><role>Yugo &quot;Braun&quot; Tennoji</role><person id="1386">Christopher R. Sabat</person></cast>
 <cast gid="2855120078" lang="EN"><role>Nae Tennoji</role><person id="31220">Brina Palencia</person></cast>
 <cast gid="1885084205" lang="EN"><role>Kurisu Makise</role><person id="58419">Trina Nishimura</person></cast>
@@ -245,15 +266,18 @@
 <credit gid="1532017982"><task>Production</task><company id="518">AT-X</company></credit>
 <credit gid="2461689521"><task>Production</task><company id="1583">Nitroplus</company></credit>
 <credit gid="3411086415"><task>Production</task><company id="1805">Frontier Works</company></credit>
-<credit gid="2158024562"><task>Production</task><company id="9941">Future Gadget Lab</company></credit></anime><anime id="12120" gid="2615118542" type="TV" name="Puella Magi Madoka Magica" precision="TV" generated-on="2014-02-16T11:28:28Z">
-<info gid="1971178306" type="Picture" src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A12120-47.jpg" width="150" height="200"><img src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A12120-47.jpg" width="150" height="200"/></info>
+<credit gid="2158024562"><task>Production</task><company id="9941">Future Gadget Lab</company></credit></anime><anime id="12120" gid="2615118542" type="TV" name="Puella Magi Madoka Magica" precision="TV" generated-on="2014-12-24T09:37:02Z">
+<info gid="1971178306" type="Picture" src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A12120-47.jpg" width="150" height="200"><img src="http://cdn.animenewsnetwork.com/thumbnails/hotlink-fit200x200/encyc/A12120-47.jpg" width="150" height="200"/></info>
 <info gid="2512138179" type="Main title" lang="EN">Puella Magi Madoka Magica</info>
 <info gid="1610535719" type="Alternative title" lang="EN">Madoka Magica</info>
 <info gid="2829718569" type="Alternative title" lang="JA">Mahō Shōjo Madoka Magica</info>
+<info gid="2109457111" type="Alternative title" lang="RU">Девочка-волшебница Мадока</info>
+<info gid="2294003667" type="Alternative title" lang="AR">الفتاة الساحرة مادوكا ماجيكا</info>
 <info gid="2931126014" type="Alternative title" lang="JA">魔法少女まどか★マギカ</info>
 <info gid="676474772" type="Alternative title" lang="ZH-TW">魔法少女小圓</info>
 <info gid="2933355739" type="Genres">action</info>
 <info gid="952272799" type="Genres">drama</info>
+<info gid="2087340372" type="Genres">magic</info>
 <info gid="2353722372" type="Genres">psychological</info>
 <info gid="963562451" type="Genres">thriller</info>
 <info gid="2612633084" type="Themes">death</info>
@@ -281,6 +305,7 @@
 <info gid="1822141626" type="Official website" lang="EN" href="http://www.madman.com.au/series/home/16771/">Madman's Official Puella Magi Madoka Magica Sales Site</info>
 <info gid="3674808126" type="Official website" lang="JA" href="http://www.madoka-magica.com/"></info>
 <info gid="2341758036" type="Official website" lang="JA" href="http://www.madoka-magica.com/">魔法少女まどか★マギカ</info>
+<ratings nb_votes="3024" weighted_score="8.5681" bayesian_score="8.56367"/>
 <episode num="1">
 <title gid="1703163265" lang="EN">As if I met Her In My Dream</title></episode>
 <episode num="2">
@@ -460,6 +485,7 @@
 <news datetime="2013-09-28T02:30:00Z" href="http://www.animenewsnetwork.com/news/2013-09-27/infinite-stratos-2-anime-promo-previews-opening-song">&lt;cite&gt;Infinite Stratos 2&lt;/cite&gt; Anime's Promo Previews Opening Song</news>
 <news datetime="2013-10-26T03:37:26Z" href="http://www.animenewsnetwork.com/news/2013-10-25/d-fragments-tv-anime-staff-cast-unveiled">&lt;cite&gt;D-Fragments&lt;/cite&gt; TV Anime's Staff, Cast Unveiled</news>
 <news datetime="2014-01-14T13:00:10Z" href="http://www.animenewsnetwork.com/news/2014-01-14/manga-entertainment-licenses-gargantia-on-the-verdurous-planet">Manga Entertainment Licenses &lt;i&gt;Gargantia on the Verdurous Planet&lt;/i&gt;</news>
+<news datetime="2014-11-08T13:00:00Z" href="http://www.animenewsnetwork.com:/news/2014-11-08/madoka-magica-characters-get-cameos-in-princess-punt-mobile-game/.80796">&lt;cite&gt;Madoka Magica&lt;/cite&gt; Characters Get Cameos in &lt;cite&gt;Princess Punt&lt;/cite&gt; Mobile Game</news>
 <staff gid="2402054452"><task>Series Director</task><person id="61248">Yukihiro Miyamoto</person></staff>
 <staff gid="2032659790"><task>Director</task><person id="1610">Akiyuki Shinbo</person></staff>
 <staff gid="859939973"><task>Series Composition</task><person id="68860">Gen Urobuchi</person></staff>
@@ -553,9 +579,9 @@
 <cast gid="1788775063" lang="ES"><role>Tatsuya Kaname</role><person id="50568">Ariadna Jiménez</person></cast>
 <cast gid="2133123110" lang="ES"><role>Kyosuke Kamijo</role><person id="68581">Cesc Martínez</person></cast>
 <cast gid="1884904796" lang="ES"><role>Kyoko Sakura</role><person id="124203">Marga López</person></cast>
-<cast gid="2739820466" lang="ES"><role>Kyubey</role><person id="124234">Inma Villalonga</person></cast>
 <cast gid="2405884441" lang="ES"><role>Hitomi Shizuki</role><person id="124235">Assumpta Massutí</person></cast>
 <cast gid="1587192324" lang="ES"><role>Mami Tomoe</role><person id="124236">Violeta Bibiloni</person></cast>
+<cast gid="2249050578" lang="ES"><role>Kyubey</role><person id="127345">Inmaculada Villalonga</person></cast>
 <cast gid="2649179784" lang="IT"><role>Kyubei</role><person id="66105">Loretta Di Pisa</person></cast>
 <cast gid="2961058473" lang="IT"><role>Madoka Kaname</role><person id="70851">Joy Saltarelli</person></cast>
 <cast gid="1559527712" lang="IT"><role>Homura Akemi</role><person id="71347">Alessia Amendola</person></cast>
@@ -579,20 +605,25 @@
 <credit gid="332652356"><task>Production</task><company id="3519">Hakuhodo DY Media Partners</company></credit>
 <credit gid="744794759"><task>Production</task><company id="5873">Houbunsha</company></credit>
 <credit gid="3773037740"><task>Production</task><company id="9623">Madoka Partners</company></credit>
-<credit gid="2007908216"><task>Production</task><company id="10442">Mainichi Broadcasting System</company></credit></anime><anime id="15336" gid="2475366211" type="TV" name="Kill la Kill" precision="TV" generated-on="2014-02-16T11:28:29Z">
-<info gid="2833086303" type="Picture" src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A15336-2833086303.1378835838.jpg" width="197" height="200"><img src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A15336-2833086303.1378835838.jpg" width="197" height="200"/><img src="http://cdn.animenewsnetwork.com/thumbnails/max500x600/encyc/A15336-2833086303.1378835838.jpg" width="500" height="507"/><img src="http://cdn.animenewsnetwork.com/images/encyc/A15336-2833086303.1378835838.jpg" width="690" height="700"/></info>
+<credit gid="2007908216"><task>Production</task><company id="10442">Mainichi Broadcasting System</company></credit></anime><anime id="15336" gid="2475366211" type="TV" name="Kill la Kill" precision="TV" generated-on="2014-12-24T09:37:02Z">
+<info gid="2833086303" type="Picture" src="http://cdn.animenewsnetwork.com/thumbnails/fit200x200/encyc/A15336-2833086303.1378835838.jpg" width="197" height="200"><img src="http://cdn.animenewsnetwork.com/thumbnails/hotlink-fit200x200/encyc/A15336-2833086303.1378835838.jpg" width="197" height="200"/><img src="http://cdn.animenewsnetwork.com/thumbnails/hotlink-max500x600/encyc/A15336-2833086303.1378835838.jpg" width="500" height="507"/><img src="http://cdn.animenewsnetwork.com/thumbnails/hotlink-full/encyc/A15336-2833086303.1378835838.jpg" width="690" height="700"/></info>
 <info gid="2965086504" type="Main title" lang="EN">Kill la Kill</info>
+<info gid="1321943701" type="Alternative title" lang="RU">Кируракиру</info>
+<info gid="849256776" type="Alternative title" lang="AR">کیل لا کیل</info>
 <info gid="837710873" type="Alternative title" lang="JA">キルラキル</info>
+<info gid="1993459897" type="Alternative title" lang="KO">킬라킬</info>
 <info gid="3475721158" type="Genres">action</info>
 <info gid="4146756296" type="Genres">comedy</info>
+<info gid="2317045484" type="Genres">drama</info>
 <info gid="1261787956" type="Genres">fantasy</info>
 <info gid="2666207079" type="Genres">science fiction</info>
-<info gid="2480697645" type="Genres">tournament</info>
 <info gid="826273318" type="Themes">assassins</info>
+<info gid="3528293883" type="Themes">conspiracy</info>
 <info gid="1354165566" type="Themes">developing powers</info>
+<info gid="3285455140" type="Themes">ecchi</info>
 <info gid="3219711505" type="Themes">fanservice</info>
 <info gid="1635445041" type="Themes">fighting</info>
-<info gid="1666732349" type="Objectionable content">TA</info>
+<info gid="1666732349" type="Objectionable content">MA</info>
 <info gid="900797436" type="Plot Summary">Ryuuko Matoi carries a large weapon shaped like half of a pair of scissors. She's looking for the woman with the other half, who killed her father. Satsuki Kiryuuin, student council president of Honnouji Academy, is said to know the woman's identity, so Ryuuko transfers there. Those who arrive at the school receive a special &quot;goku uniform,&quot; and Satsuki has used that power to rule the school in fear.</info>
 <info gid="1986859793" type="Running time">24</info>
 <info gid="2026869439" type="Number of episodes">24</info>
@@ -600,10 +631,13 @@
 <info gid="1665343714" type="Opening Theme">#1: &quot;Sirius&quot; by Eir Aoi</info>
 <info gid="2768152803" type="Opening Theme">#2: &quot;ambiguous&quot; by GRANiDELiA</info>
 <info gid="2263064035" type="Ending Theme">#1: &quot;Gomen ne, Ii ko ja Irarenai.&quot; by Miku Sawai</info>
-<info gid="1220068639" type="Ending Theme">#2: &quot;Shinsekai Koukyougaku (新世界交響楽; New World Symphony)&quot; by Sayonara Ponytail</info>
+<info gid="1220068639" type="Ending Theme">#2: &quot;Shinsekai Koukyougaku&quot; (新世界交響楽; &quot;New World Symphony&quot;) by Sayonara Ponytail</info>
+<info gid="1801671052" type="Insert song">&quot;Before My Body is Dry&quot; by Mika Kobayashi ft. David Whitaker</info>
+<info gid="2488489810" type="Insert song">&quot;Blumenkranz&quot; by Cyua</info>
 <info gid="1791591710" type="Insert song">&quot;Sanbika (サンビカ;Hymn)&quot; by Eir Aoi (ep 7)</info>
 <info gid="2870649864" type="Official website" lang="EN" href="http://KilllaKill.com">Aniplex USA | Kill la Kill</info>
 <info gid="1959678253" type="Official website" lang="JA" href="http://www.kill-la-kill.jp/">TVアニメ『キルラキル KILL la KILL』オフィシャルサイト</info>
+<ratings nb_votes="1056" weighted_score="8.1875" bayesian_score="8.17955"/>
 <episode num="1">
 <title gid="3156365580" lang="EN">If Only I Had Thorns Like a Thistle</title></episode>
 <episode num="2">
@@ -640,13 +674,43 @@
 <title gid="3240490069" lang="EN">Tell Me Why</title></episode>
 <episode num="18">
 <title gid="1885710683" lang="EN">Into the Night</title></episode>
+<episode num="19">
+<title gid="3232170441" lang="EN">Raindrops Keep Falling on My Head</title></episode>
+<episode num="20">
+<title gid="3935220379" lang="EN">Far from the Madding Crowd</title></episode>
+<episode num="21">
+<title gid="1744809972" lang="EN">Incomplete</title></episode>
+<episode num="22">
+<title gid="1868990598" lang="EN">Tell Me How You Feel</title></episode>
+<episode num="23">
+<title gid="2009640242" lang="EN">Imitation Gold</title></episode>
+<episode num="24">
+<title gid="1907137933" lang="EN">Past the Infinite Darkness</title></episode>
+<review href="http://www.animenewsnetwork.com/review/kill-la-kill-limited-edition/bd-dvd-2/.80333">Kill la Kill [Limited Edition] BD+DVD 2</review>
+<review href="http://www.animenewsnetwork.com/review/kill-la-kill-limited-edition/bd-dvd-1/.76847">Kill la Kill [Limited Edition] BD+DVD 1</review>
+<review href="http://www.animenewsnetwork.com/review/kill-la-kill/episodes-13">Kill la Kill Episodes 13-24 Streaming</review>
 <review href="http://www.animenewsnetwork.com/review/kill-la-kill/episodes-1">Kill la Kill Episodes 1-6 Streaming</review>
+<release date="2014-07-15" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=26592">Kill la Kill  (Blu-Ray 1)</release>
+<release date="2014-10-21" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=27040">Kill la Kill (Blu-Ray 2)</release>
+<release date="2014-12-23" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=27373">Kill la Kill (Blu-Ray 3)</release>
+<release date="2015-02-24" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=27376">Kill la Kill (Blu-Ray 4)</release>
+<release date="2014-10-15" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=26838">Kill la Kill [AU] (Blu-Ray 1)</release>
+<release date="2014-10-15" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=26837">Kill la Kill [Limited Edition] [AU] (Blu-Ray 1)</release>
+<release date="2014-07-15" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=26594">Kill la Kill [Limited Edition] (BD+DVD 1)</release>
+<release date="2014-10-21" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=27039">Kill la Kill [Limited Edition] (BD+DVD 2)</release>
+<release date="2014-12-23" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=27372">Kill la Kill [Limited Edition] (BD+DVD 3)</release>
+<release date="2015-02-24" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=27375">Kill la Kill [Limited Edition] (BD+DVD 4)</release>
+<release date="2014-07-15" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=26593">Kill la Kill  (DVD 1)</release>
+<release date="2014-10-21" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=27041">Kill la Kill (DVD 2)</release>
+<release date="2014-12-23" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=27374">Kill la Kill (DVD 3)</release>
+<release date="2015-02-24" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=27377">Kill la Kill (DVD 4)</release>
+<release date="2014-10-15" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=26835">Kill la Kill (DVD 1)</release>
+<release date="2014-10-15" href="http://www.animenewsnetwork.com/encyclopedia/releases.php?id=26836">Kill la Kill [Limited Edition] (DVD 1)</release>
 <news datetime="2013-05-08T13:05:46Z" href="http://www.animenewsnetwork.com/news/2013-05-08/kill-la-kill-anime-reunites-gurren-lagann-director-writer">&lt;cite&gt;Kill La Kill&lt;/cite&gt; Anime Reunites &lt;cite&gt;Gurren Lagann&lt;/cite&gt; Director, Writer</news>
 <news datetime="2013-08-10T15:33:14Z" href="http://www.animenewsnetwork.com/news/2013-08-10/aniplex-usa-adds-kill-la-kill-tv-anime">Aniplex USA Adds &lt;cite&gt;Kill La Kill&lt;/cite&gt; TV Anime</news>
 <news datetime="2013-08-11T18:15:00Z" href="http://www.animenewsnetwork.com/news/2013-08-11/aniplex-usa-streams-kill-la-kill-ad-with-english-subtites">Aniplex USA Streams &lt;cite&gt;Kill la Kill&lt;/cite&gt; Ad With English Subtitles</news>
 <news datetime="2013-08-30T01:35:00Z" href="http://www.animenewsnetwork.com/news/2013-08-29/kill-la-kill-anime-new-ad-previews-aoi-eir-song">&lt;cite&gt;Kill la Kill&lt;/cite&gt; Anime's New Ad Previews Eir Aoi's Song</news>
 <news datetime="2013-08-31T14:00:00Z" href="http://www.animenewsnetwork.com/news/2013-08-31/gurren-lagann-staff-stream-kill-la-kill-anime-30-second-ad">&lt;cite&gt;Gurren Lagann&lt;/cite&gt; Staff Streams &lt;cite&gt;Kill la Kill&lt;/cite&gt; Anime's 30-Second Ad</news>
-<news datetime="2013-09-04T22:00:00Z" href="http://www.animenewsnetwork.com/news/2013-09-04/gurren-lagann-staff-kill-la-kill-anime-gets-manga">&lt;cite&gt;Gurren Lagann&lt;/cite&gt; Staff's &lt;cite&gt;Kill la Kill&lt;/cite&gt; Anime Gets Manga</news>
 <news datetime="2013-09-07T04:00:00Z" href="http://www.animenewsnetwork.com/news/2013-09-07/kill-la-kill-anime-full-main-cast-revealed">&lt;cite&gt;Kill la Kill&lt;/cite&gt; Anime's Full Main Cast Revealed</news>
 <news datetime="2013-09-13T23:10:00Z" href="http://www.animenewsnetwork.com/news/2013-09-13/gurren-lagann-staff-streams-kill-la-kill-anime-3-minute-promo">&lt;cite&gt;Gurren Lagann&lt;/cite&gt; Staff Streams &lt;cite&gt;Kill La Kill&lt;/cite&gt; Anime's 3-Minute Promo</news>
 <news datetime="2013-09-18T20:00:00Z" href="http://www.animenewsnetwork.com/news/2013-09-18/aniplex-usa-to-stream-magi-and-valvrave-2nd-seasons-kill-la-kill-on-4-sites">Aniplex USA to Stream &lt;cite&gt;Magi &amp; Valvrave&lt;/cite&gt; 2nd Seasons, &lt;cite&gt;Kill la Kill&lt;/cite&gt; on 4 Sites</news>
@@ -660,17 +724,35 @@
 <news datetime="2013-12-25T01:25:52Z" href="http://www.animenewsnetwork.com/news/2013-12-24/aniplex-usa-to-release-kill-la-kill-original-soundtrack-cd">Aniplex USA to Release &lt;cite&gt;Kill la Kill&lt;/cite&gt; Original Soundtrack CD</news>
 <news datetime="2013-12-29T01:16:29Z" href="http://www.animenewsnetwork.com/news/2013-12-28/right-stuf-continues-kill-la-kill-sountrack-preorders">Right Stuf Continues &lt;cite&gt;Kill la Kill&lt;/cite&gt; Soundtrack Preorders</news>
 <news datetime="2014-01-03T04:00:00Z" href="http://www.animenewsnetwork.com/news/2014-01-02/sayonara-ponytail-to-perform-kill-la-kill-2nd-ending-theme">Sayonara Ponytail to Perform &lt;cite&gt;Kill la Kill's&lt;/cite&gt; 2nd Ending Theme</news>
+<news datetime="2014-03-04T05:24:54Z" href="http://www.animenewsnetwork.com/news/2014-03-04/imported-kill-la-kill-original-soundtrack-sells-out-again">Imported &lt;cite&gt;Kill la Kill&lt;/cite&gt; Original Soundtrack Sells Out Again</news>
+<news datetime="2014-03-29T03:15:00Z" href="http://www.animenewsnetwork.com/news/2014-03-28/unaired-kill-la-kill-episode-story-teased-in-video">Unaired &lt;i&gt;Kill la Kill&lt;/i&gt; Episode's Story Teased in Video</news>
+<news datetime="2014-05-12T20:37:24Z" href="http://www.animenewsnetwork.com/news/2014-05-12/kill-la-kill-english-dub-to-premiere-at-anime-expo">&lt;cite&gt;Kill la Kill&lt;/cite&gt; English Dub to Premiere at Anime Expo</news>
+<news datetime="2014-05-13T08:30:40Z" href="http://www.animenewsnetwork.com/news/2014-05-13/japan-animation-blu-ray-disc-ranking-may-5-11">Japan's Animation Blu-ray Disc Ranking, May 5-11</news>
+<news datetime="2014-05-13T08:55:00Z" href="http://www.animenewsnetwork.com/news/2014-05-13/japan-animation-dvd-ranking-may-5-11">Japan's Animation DVD Ranking, May 5-11</news>
+<news datetime="2014-06-04T11:39:25Z" href="http://www.animenewsnetwork.com:/news/2014-06-04/anime-limited-acquires-fate-kaleid-liner-prisma-illya/.75192">Anime Limited Acquires &lt;i&gt;Fate/kaleid liner Prisma Illya&lt;/i&gt; (Updated)</news>
+<news datetime="2014-07-16T20:30:45Z" href="http://www.animenewsnetwork.com:/news/2014-07-17/north-american-anime-manga-releases-july-13-19/.76713">North American Anime, Manga Releases, July 13-19</news>
+<news datetime="2014-09-09T08:28:09Z" href="http://www.animenewsnetwork.com:/news/2014-09-09/japan-animation-blu-ray-disc-ranking-september-1-7/.78565">Japan's Animation Blu-ray Disc Ranking, September 1-7</news>
+<news datetime="2014-09-09T09:00:00Z" href="http://www.animenewsnetwork.com:/news/2014-09-09/japan-animation-dvd-ranking-september-1-7/.78567">Japan's Animation DVD Ranking, September 1-7</news>
+<news datetime="2014-09-15T10:00:00Z" href="http://www.animenewsnetwork.com:/news/2014-09-15/madman-adds-kill-la-kill-to-animelab/.78793">Madman adds Kill La Kill to AnimeLab</news>
+<news datetime="2014-09-25T04:00:00Z" href="http://www.animenewsnetwork.com:/news/2014-09-25/kill-la-kill-ova-to-premiere-at-new-york-comic-con/.79173">&lt;cite&gt;Kill la Kill&lt;/cite&gt; OVA to Premiere at New York Comic Con</news>
+<news datetime="2014-10-21T19:20:00Z" href="http://www.animenewsnetwork.com:/news/2014-10-21/north-american-anime-manga-releases-october-19-25/.80162">North American Anime, Manga Releases, October 19-25</news>
+<news datetime="2014-11-28T11:51:52Z" href="http://www.animenewsnetwork.com:/news/2014-11-28/giovanni-island-film-wins-media-arts-award/.81542">&lt;cite&gt;Giovanni's Island&lt;/cite&gt; Film Wins Media Arts Award</news>
+<news datetime="2014-12-14T04:57:00Z" href="http://www.animenewsnetwork.com:/news/2014-12-13/sao-extra-edition-kill-la-kill-vol-3-ship-early/.82024">&lt;cite&gt;SAO Extra Edition, Kill la Kill&lt;/cite&gt; Vol. 3 Ship Early</news>
+<news datetime="2014-12-12T17:30:48Z" href="http://www.animenewsnetwork.com:/news/2014-12-12/otakon-vegas-to-host-kill-la-kill-character-designer-animation-director-sushio/.82092">Otakon Vegas to Host &lt;cite&gt;Kill la Kill&lt;/cite&gt; Character Designer, Animation Director Sushio</news>
+<news datetime="2014-12-23T21:00:33Z" href="http://www.animenewsnetwork.com:/news/2014-12-23/north-american-anime-manga-releases-december-21-27/.82564">North American Anime, Manga Releases, December 21-27</news>
 <staff gid="1418448269"><task>Director</task><person id="915">Hiroyuki Imaishi</person></staff>
 <staff gid="2006543944"><task>Series Composition</task><person id="57806">Kazuki Nakashima</person></staff>
 <staff gid="2930734303"><task>Script</task><person id="57806">Kazuki Nakashima</person></staff>
 <staff gid="652270149"><task>Script</task><person id="78743">Hiromi Wakabayashi</person></staff>
 <staff gid="3211825756"><task>Script</task><person id="78744">Hiroshi Seko</person></staff>
+<staff gid="3786328527"><task>Storyboard</task><person id="172">Kazuya Tsurumaki</person></staff>
 <staff gid="3236941577"><task>Storyboard</task><person id="915">Hiroyuki Imaishi</person></staff>
 <staff gid="1520871733"><task>Storyboard</task><person id="1652">Mahiro Maeda</person></staff>
 <staff gid="1760438111"><task>Storyboard</task><person id="3682">Masayuki</person></staff>
 <staff gid="601358957"><task>Storyboard</task><person id="3702">Yoh Yoshinari</person></staff>
 <staff gid="1119751147"><task>Storyboard</task><person id="7731">Shinji Higuchi</person></staff>
 <staff gid="1965340160"><task>Storyboard</task><person id="11208">Ken Ootsuka</person></staff>
+<staff gid="1381858810"><task>Storyboard</task><person id="13831">Akitoshi Yokoyama</person></staff>
 <staff gid="213228739"><task>Storyboard</task><person id="24059">Hiroshi Kobayashi</person></staff>
 <staff gid="1914854055"><task>Storyboard</task><person id="25111">Shigeto Koyama</person></staff>
 <staff gid="3389915137"><task>Storyboard</task><person id="25379">Shouko Nakamura</person></staff>
@@ -682,9 +764,12 @@
 <staff gid="2210388135"><task>Storyboard</task><person id="78743">Hiromi Wakabayashi</person></staff>
 <staff gid="1061518078"><task>Storyboard</task><person id="84034">Yuzuru Tachikawa</person></staff>
 <staff gid="1881863431"><task>Storyboard</task><person id="89837">Hiroshi Ikehata</person></staff>
+<staff gid="3609438743"><task>Episode Director</task><person id="172">Kazuya Tsurumaki</person></staff>
+<staff gid="410465714"><task>Episode Director</task><person id="915">Hiroyuki Imaishi</person></staff>
 <staff gid="1180340570"><task>Episode Director</task><person id="1959">Koji Aritomi</person></staff>
 <staff gid="1927184767"><task>Episode Director</task><person id="5135">Keisuke Onishi</person></staff>
 <staff gid="2257009752"><task>Episode Director</task><person id="7736">Masahiko Otsuka</person></staff>
+<staff gid="3326228860"><task>Episode Director</task><person id="11433">Masayuki Oozeki</person></staff>
 <staff gid="3158625049"><task>Episode Director</task><person id="14321">Kazuhisa Ouno</person></staff>
 <staff gid="3426915250"><task>Episode Director</task><person id="24059">Hiroshi Kobayashi</person></staff>
 <staff gid="2306044933"><task>Episode Director</task><person id="25379">Shouko Nakamura</person></staff>
@@ -696,6 +781,7 @@
 <staff gid="1967909497"><task>Episode Director</task><person id="78010">Yoshiko Mikami</person></staff>
 <staff gid="3040421088"><task>Episode Director</task><person id="81163">Yoshihide Ibata</person></staff>
 <staff gid="1824964427"><task>Episode Director</task><person id="84034">Yuzuru Tachikawa</person></staff>
+<staff gid="1168639436"><task>Episode Director</task><person id="88989">Hiroyuki Oshima</person></staff>
 <staff gid="850655299"><task>Episode Director</task><person id="89837">Hiroshi Ikehata</person></staff>
 <staff gid="2884775479"><task>Unit Director</task><person id="915">Hiroyuki Imaishi</person></staff>
 <staff gid="146362204"><task>Unit Director</task><person id="7736">Masahiko Otsuka</person></staff>
@@ -707,17 +793,23 @@
 <staff gid="2432704425"><task>Art</task><person id="120477">Saishi Ichiko</person></staff>
 <staff gid="4002601937"><task>Chief Animation Director</task><person id="31564">Sushio</person></staff>
 <staff gid="1815013594"><task>Animation Director</task><person id="562">Katsuzo Hirata</person></staff>
+<staff gid="2247274478"><task>Animation Director</task><person id="915">Hiroyuki Imaishi</person></staff>
+<staff gid="565015568"><task>Animation Director</task><person id="16877">Masayoshi Kikuchi</person></staff>
 <staff gid="3522257176"><task>Animation Director</task><person id="18297">Masayuki Sato</person></staff>
+<staff gid="352645450"><task>Animation Director</task><person id="24229">Takafumi Hori</person></staff>
 <staff gid="856440679"><task>Animation Director</task><person id="27551">Ushio Tazawa</person></staff>
 <staff gid="2630155650"><task>Animation Director</task><person id="31564">Sushio</person></staff>
 <staff gid="2989586980"><task>Animation Director</task><person id="31782">Masumi Hoshino</person></staff>
 <staff gid="2284637813"><task>Animation Director</task><person id="34989">Shuichi Hara</person></staff>
+<staff gid="60335662"><task>Animation Director</task><person id="38827">Mayumi Fujita</person></staff>
+<staff gid="1942657574"><task>Animation Director</task><person id="40355">Yusuke Yoshigaki</person></staff>
 <staff gid="3521410869"><task>Animation Director</task><person id="51030">Tetsuya Hasegawa</person></staff>
 <staff gid="2457409193"><task>Animation Director</task><person id="58562">Yoshihiro Maeda</person></staff>
 <staff gid="1871825618"><task>Animation Director</task><person id="77898">Yoshifumi Terai</person></staff>
 <staff gid="656834522"><task>Animation Director</task><person id="78776">Masaru Sakamoto</person></staff>
 <staff gid="1594051519"><task>Animation Director</task><person id="79301">Shōta Iwasaki</person></staff>
 <staff gid="818627817"><task>Animation Director</task><person id="80719">Kōtarō Nakamori</person></staff>
+<staff gid="2575417772"><task>Animation Director</task><person id="83259">Shūhei Handa</person></staff>
 <staff gid="2590541989"><task>Animation Director</task><person id="83260">Mai Yoneyama</person></staff>
 <staff gid="2477124972"><task>Animation Director</task><person id="83263">Keisuke Kojima</person></staff>
 <staff gid="2957693240"><task>Animation Director</task><person id="83848">Kenta Mimuro</person></staff>
@@ -727,10 +819,48 @@
 <staff gid="2262667240"><task>Producer</task><person id="2232">Tetsuya Endo</person></staff>
 <staff gid="3530637220"><task>Producer</task><person id="17526">Eiichi Kamagata</person></staff>
 <staff gid="2445994501"><task>Producer</task><person id="39394">Kozue Kananiwa</person></staff>
+<staff gid="1426622150"><task>Producer</task><person id="40459">Yosuke Toba</person></staff>
 <staff gid="1809025778"><task>Producer</task><person id="45239">Souichi Tsuji</person></staff>
-<staff gid="1426622150"><task>Producer</task><person id="57616">Hironori Toba</person></staff>
 <staff gid="1114440050"><task>Producer</task><person id="78747">Yoshio Manabe</person></staff>
 <staff gid="1998996115"><task>Producer</task><person id="124563">Ryu Hashimoto</person></staff>
+<cast gid="2261587069" lang="DE"><role>Ryuuko Matoi</role><person id="28955">Gundi Eberhard</person></cast>
+<cast gid="2602048420" lang="DE"><role>Houka Inomota</role><person id="67598">René Dawn-Claude</person></cast>
+<cast gid="1809881740" lang="DE"><role>Nonon Jakuzure</role><person id="110462">Nina Amerschläger</person></cast>
+<cast gid="2682258794" lang="DE"><role>Aikuro Mikisugi</role><person id="110469">Peter Lehn</person></cast>
+<cast gid="3540614919" lang="DE"><role>Senketsu</role><person id="110481">Matthias Keller</person></cast>
+<cast gid="2329227524" lang="DE"><role>Ira Gamagoori</role><person id="123213">Dirk Hardegen</person></cast>
+<cast gid="1398967873" lang="DE"><role>Satsuki Kiryuuin</role><person id="126754">Sandra Lühr</person></cast>
+<cast gid="2873574870" lang="DE"><role>Nui Harime</role><person id="126756">Sonia Muratore</person></cast>
+<cast gid="2049540274" lang="DE"><role>Ragyou Kiryuin</role><person id="126757">Corinna Maria Lechler</person></cast>
+<cast gid="2694629059" lang="DE"><role>Uzu Sanageyama</role><person id="126758">David Schulze</person></cast>
+<cast gid="631098854" lang="DE"><role>Tsumugu Kinagase</role><person id="126761">Richard van Weyden</person></cast>
+<cast gid="838859207" lang="DE"><role>Mako Mankanshoku</role><person id="127338">Annette Potempa</person></cast>
+<cast gid="235100154" lang="EN"><role>Satsuki Kiryuuin</role><person id="2563">Carrie Keranen</person></cast>
+<cast gid="3382947860" lang="EN"><role>Nui Harime</role><person id="3419">Stephanie Sheh</person></cast>
+<cast gid="967295770" lang="EN"><role>Hōka Inumuta</role><person id="3664">Steve Cannon</person></cast>
+<cast gid="2552435530" lang="EN"><role>Ira Gamagōri</role><person id="7108">Patrick Seitz</person></cast>
+<cast gid="2859849128" lang="EN"><role>Uzu Sanageyama</role><person id="13265">Grant George</person></cast>
+<cast gid="1846566618" lang="EN"><role>Senketsu</role><person id="55038">David Vincent</person></cast>
+<cast gid="1611224062" lang="EN"><role>Aikurō Mikisugi</role><person id="62521">Matthew Mercer</person></cast>
+<cast gid="2566909143" lang="EN"><role>Ragyo Kiriyun</role><person id="70304">Laura Post</person></cast>
+<cast gid="2933104804" lang="EN"><role>Tsumugu Kinagase</role><person id="70445">Kaiji Tang</person></cast>
+<cast gid="1794816573" lang="EN"><role>Mako Mankanshoku</role><person id="95337">Christine Marie Cabanos</person></cast>
+<cast gid="1797827027" lang="EN"><role>Nonon Jakuzure</role><person id="104914">Sarah Williams</person></cast>
+<cast gid="3723022578" lang="EN"><role>Ryuuko Matoi</role><person id="124478">Erica Mendez</person></cast>
+<cast gid="3616233927" lang="FR"><role>Ragyo Kiryuuin</role><person id="28707">Virginie Ledieu</person></cast>
+<cast gid="2664428147" lang="FR"><role>Senketsu</role><person id="28734">Yann Pichon</person></cast>
+<cast gid="982291363" lang="FR"><role>Aikurō Mikisugi</role><person id="38549">Martial Leminoux</person></cast>
+<cast gid="1420661037" lang="FR"><role>Nonon Jakuzure</role><person id="38750">Nathalie Bienaime</person></cast>
+<cast gid="922181940" lang="FR"><role>Mako Mankanshoku</role><person id="45000">Caroline Combes</person></cast>
+<cast gid="1336087203" lang="FR"><role>Additional voices</role><person id="54390">Bruno Meyere</person></cast>
+<cast gid="2286912353" lang="FR"><role>Uzu Sanageyama</role><person id="54390">Bruno Meyere</person></cast>
+<cast gid="1687571563" lang="FR"><role>Ira Gamagôri</role><person id="55620">Julien Chatelet</person></cast>
+<cast gid="2032886445" lang="FR"><role>Satsuki Kiryuuin</role><person id="59010">Julie Deliquet</person></cast>
+<cast gid="1234729441" lang="FR"><role>Ryûko Matoi</role><person id="65515">Fanny Bloc</person></cast>
+<cast gid="2418736866" lang="FR"><role>Tsumugu Kinagase</role><person id="70472">Jérémy Zylberberg</person></cast>
+<cast gid="975488005" lang="FR"><role>Addtional voices</role><person id="79281">Grégory Laisné</person></cast>
+<cast gid="2230584484" lang="FR"><role>Hōka Inumuta</role><person id="79281">Grégory Laisné</person></cast>
+<cast gid="3467160074" lang="FR"><role>Nui Harime</role><person id="82933">Marie Nonnenmacher</person></cast>
 <cast gid="4172358063" lang="JA"><role>Hōka Inumuta</role><person id="507">Hiroyuki Yoshino</person></cast>
 <cast gid="2341239210" lang="JA"><role>Nui Harime</role><person id="524">Yukari Tamura</person></cast>
 <cast gid="1594203325" lang="JA"><role>Satsuki Kiryuuin</role><person id="545">Ryoka Yuzuki</person></cast>
@@ -739,7 +869,7 @@
 <cast gid="630840552" lang="JA"><role>Tsumugu Kinagase</role><person id="780">Katsuyuki Konishi</person></cast>
 <cast gid="1306578242" lang="JA"><role>Nonon Jakuzure</role><person id="1454">Mayumi Shintani</person></cast>
 <cast gid="3127612913" lang="JA"><role>Uzu Sanageyama</role><person id="1497">Nobuyuki Hiyama</person></cast>
-<cast gid="3435035475" lang="JA"><role>Ragyo Kiryuin</role><person id="5108">Romi Park</person></cast>
+<cast gid="3435035475" lang="JA"><role>Ragyo Kiryuuin</role><person id="5108">Romi Park</person></cast>
 <cast gid="2050688436" lang="JA"><role>Ira Gamagōri</role><person id="7015">Tetsu Inada</person></cast>
 <cast gid="2627041694" lang="JA"><role>Ryuuko Matoi</role><person id="17254">Ami Koshimizu</person></cast>
 <cast gid="2800006523" lang="JA"><role>Mako Mankanshoku</role><person id="115634">Aya Suzaki</person></cast>
