@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["getkura+ann_wrapper@gmail.com"]
   spec.description   = 'A simple wrapper for the Anime News Network API'
   spec.summary       = 'Anime News Network API wrapper'
-  spec.homepage      = "http://getkura.github.io/ann_wrapper/"
+  spec.homepage      = "http://shawntoffel.github.io/ann_wrapper/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
